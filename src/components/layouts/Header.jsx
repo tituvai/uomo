@@ -30,11 +30,11 @@ const Header = () => {
                         </div>
                     </div>
                     <div className="flex items-center gap-7">
-                        <Search/>
-                        <User/>
-                        <Heart/>
-                        <Bage/>
-                        <Bars/>
+                        <Link to={'/'}><Search/></Link>
+                        <Link to={'/'}><User/></Link>
+                        <Link to={'/'}><Heart/></Link>
+                        <Link to={'/'}><Bage/></Link>
+                        <Link to={'/'}><Bars/></Link>   
                     </div>
                 </Flex>
             </Container>

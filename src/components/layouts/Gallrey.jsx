@@ -18,6 +18,7 @@ import blachshat from '/src/assets/gallrey8 (2).jpg'
 import bage1 from '/src/assets/gallrey8 (3).jpg'
 import blacktop from '/src/assets/gallrey8 (4).jpg'
 import blueshat from '/src/assets/gallrey8 (5).jpg'
+import { Link } from 'react-router-dom'
 const Gallrey = () => {
   return (
     <>
@@ -27,41 +28,89 @@ const Gallrey = () => {
                     <Hadding className={'text-[35px] text-menuC'} text={'@UOMO'} as={'h3'}/>
                 </div>
                 <Flex className={'flex-wrap gap-y-2 pb-25'}>
-                    <div className="w-[230px] h-[230px]">
-                        <Image className={'w-full h-full'} imgSrc={man}/>
+                    <div className="w-[230px] h-[230px] relative group">
+                        <Link to={'/'}><Image className={'w-full h-full'} imgSrc={man}/>
+                        <div className="w-[230px] h-[230px] bg-white opacity-15 absolute top-0 left-0 scale-x-0 group-hover:scale-x-100 duration-700"></div>
+                        <div className="w-[230px] h-[230px] bg-white opacity-15 absolute top-0 left-0 scale-y-0 group-hover:scale-y-100 duration-700"></div>
+                        </Link>
                     </div>
-                    <div className="w-[230px] h-[230px]">
+                    
+                    <div className="w-[230px] h-[230px] relative group">
+                        <Link to={'/'}>
                         <Image className={'w-full h-full'} imgSrc={treeshat}/>
+                        <div className="w-[230px] h-[230px] bg-white opacity-15 absolute top-0 left-0 scale-x-0 group-hover:scale-x-100 duration-700"></div>
+                        <div className="w-[230px] h-[230px] bg-white opacity-15 absolute top-0 left-0 scale-y-0 group-hover:scale-y-100 duration-700"></div>
+                        </Link>
                     </div>
-                    <div className="w-[230px] h-[230px]">
+                    <div className="w-[230px] h-[230px] relative group">
+                        <Link to={'/'}>
                         <Image className={'w-full h-full'} imgSrc={glass}/>
+                        <div className="w-[230px] h-[230px] bg-white opacity-15 absolute top-0 left-0 scale-x-0 group-hover:scale-x-100 duration-700"></div>
+                        <div className="w-[230px] h-[230px] bg-white opacity-15 absolute top-0 left-0 scale-y-0 group-hover:scale-y-100 duration-700"></div>
+                        </Link>
                     </div>
-                    <div className="w-[230px] h-[230px]">
+                    <div className="w-[230px] h-[230px] relative group">
+                        <Link to={'/'}>
                         <Image className={'w-full h-full'} imgSrc={top}/>
+                        <div className="w-[230px] h-[230px] bg-white opacity-15 absolute top-0 left-0 scale-x-0 group-hover:scale-x-100 duration-700"></div>
+                        <div className="w-[230px] h-[230px] bg-white opacity-15 absolute top-0 left-0 scale-y-0 group-hover:scale-y-100 duration-700"></div>
+                        </Link>
                     </div>
-                    <div className="w-[230px] h-[230px]">
+                    <div className="w-[230px] h-[230px] relative group">
+                        <Link to={'/'}>
                         <Image className={'w-full h-full'} imgSrc={jaket}/>
+                        <div className="w-[230px] h-[230px] bg-white opacity-15 absolute top-0 left-0 scale-x-0 group-hover:scale-x-100 duration-700"></div>
+                        <div className="w-[230px] h-[230px] bg-white opacity-15 absolute top-0 left-0 scale-y-0 group-hover:scale-y-100 duration-700"></div>
+                        </Link>
                     </div>
-                    <div className="w-[230px] h-[230px]">
+                    <div className="w-[230px] h-[230px] relative group">
+                        <Link to={'/'}>
                         <Image className={'w-full h-full'} imgSrc={bag}/>
+                        <div className="w-[230px] h-[230px] bg-white opacity-15 absolute top-0 left-0 scale-x-0 group-hover:scale-x-100 duration-700"></div>
+                        <div className="w-[230px] h-[230px] bg-white opacity-15 absolute top-0 left-0 scale-y-0 group-hover:scale-y-100 duration-700"></div>
+                        </Link>
                     </div>
-                    <div className="w-[230px] h-[230px]">
+                    <div className="w-[230px] h-[230px] relative group">
+                        <Link to={'/'}>
                         <Image className={'w-full h-full'} imgSrc={jaket2}/>
+                        <div className="w-[230px] h-[230px] bg-white opacity-15 absolute top-0 left-0 scale-x-0 group-hover:scale-x-100 duration-700"></div>
+                        <div className="w-[230px] h-[230px] bg-white opacity-15 absolute top-0 left-0 scale-y-0 group-hover:scale-y-100 duration-700"></div>
+                        </Link>
                     </div>
-                    <div className="w-[230px] h-[230px]">
+                    <div className="w-[230px] h-[230px] relative group">
+                        <Link to={'/'}>
                         <Image className={'w-full h-full'} imgSrc={blachshat}/>
+                        <div className="w-[230px] h-[230px] bg-white opacity-15 absolute top-0 left-0 scale-x-0 group-hover:scale-x-100 duration-700"></div>
+                        <div className="w-[230px] h-[230px] bg-white opacity-15 absolute top-0 left-0 scale-y-0 group-hover:scale-y-100 duration-700"></div>
+                        </Link>
                     </div>
-                    <div className="w-[230px] h-[230px]">
+                    <div className="w-[230px] h-[230px] relative group">
+                        <Link to={'/'}>
                         <Image className={'w-full h-full'} imgSrc={bage1}/>
+                        <div className="w-[230px] h-[230px] bg-white opacity-15 absolute top-0 left-0 scale-x-0 group-hover:scale-x-100 duration-700"></div>
+                        <div className="w-[230px] h-[230px] bg-white opacity-15 absolute top-0 left-0 scale-y-0 group-hover:scale-y-100 duration-700"></div>
+                        </Link>
                     </div>
-                    <div className="w-[230px] h-[230px]">
+                    <div className="w-[230px] h-[230px] relative group">
+                        <Link to={'/'}>
                         <Image className={'w-full h-full'} imgSrc={blacktop}/>
+                        <div className="w-[230px] h-[230px] bg-white opacity-15 absolute top-0 left-0 scale-x-0 group-hover:scale-x-100 duration-700"></div>
+                        <div className="w-[230px] h-[230px] bg-white opacity-15 absolute top-0 left-0 scale-y-0 group-hover:scale-y-100 duration-700"></div>
+                        </Link>
                     </div>
-                    <div className="w-[230px] h-[230px]">
+                    <div className="w-[230px] h-[230px] relative group">
+                        <Link to={'/'}>
                         <Image className={'w-full h-full'} imgSrc={blueshat}/>
+                        <div className="w-[230px] h-[230px] bg-white opacity-15 absolute top-0 left-0 scale-x-0 group-hover:scale-x-100 duration-700"></div>
+                        <div className="w-[230px] h-[230px] bg-white opacity-15 absolute top-0 left-0 scale-y-0 group-hover:scale-y-100 duration-700"></div>
+                        </Link>
                     </div>
-                    <div className="w-[230px] h-[230px]">
+                    <div className="w-[230px] h-[230px] relative group">
+                        <Link to={'/'}>
                         <Image className={'w-full h-full'} imgSrc={longtop}/>
+                        <div className="w-[230px] h-[230px] bg-white opacity-15 absolute top-0 left-0 scale-x-0 group-hover:scale-x-100 duration-700"></div>
+                        <div className="w-[230px] h-[230px] bg-white opacity-15 absolute top-0 left-0 scale-y-0 group-hover:scale-y-100 duration-700"></div>
+                        </Link>
                     </div>
                     
                 </Flex>

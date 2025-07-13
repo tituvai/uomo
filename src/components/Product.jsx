@@ -3,6 +3,7 @@ import Image from '/src/components/Image'
 import Flex from '/src/components/Flex'
 import { CiHeart } from "react-icons/ci";
 import Hadding from './Hadding'
+import { Link } from 'react-router-dom';
 
 
 const Product = ({productSrc, productAlt, productPrice, productDelete, productTitle, opacitySrc, opacityAlt}) => {
@@ -23,9 +24,7 @@ const Product = ({productSrc, productAlt, productPrice, productDelete, productTi
                 <span className='text-base text-deleteC'><del>{productDelete}</del></span>
                 
             </div>
-            <div className="w-[300px] absolute left-1/5 bottom-1/4 opacity-0 translate-y-4 transition-all group-hover:translate-y-0  group-hover:opacity-100 duration-700">
-              <button className='text-base text-menuC font-semibold py-4 px-12 bg-white'>ADD TO CARD</button>
-            </div>
+           <Link to={'/'}><button className='text-base text-menuC font-semibold py-4 cursor-pointer w-[270px] bg-white text-center hover:bg-borderC absolute left-1/2 -translate-x-1/2 bottom-1/4 opacity-0 translate-y-4 transition-all group-hover:translate-y-0  group-hover:opacity-100 duration-700'>ADD TO CARD</button></Link> 
         </div>
     </>
   )
