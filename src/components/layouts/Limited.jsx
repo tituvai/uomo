@@ -1,7 +1,6 @@
 import React from 'react'
 import Container from '../Container'
 import Hadding from '../Hadding'
-import Flex from '../Flex'
 import Product from '../Product'
 import cap from '/src/assets/cap.png'
 import balt from '/src/assets/balt.png'
