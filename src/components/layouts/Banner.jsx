@@ -6,7 +6,7 @@ import Hadding from '/src/components/Hadding'
 import Image from '/src/components/Image'
 import Button from '../Button'
 import bnnerOne from '/src/assets/BannerOne.png'
-import bnner2 from '/src/assets/Banner2.png'
+import bnner2 from '/src/assets/banner2.png'
 import bannerBg from '/src/assets/bannerBg.png'
 
 
