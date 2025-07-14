@@ -26,7 +26,7 @@ const Banner = () => {
 
       <div className="slider-container">
       <Slider {...settings} className="custom-dots" >
-        <div className="pt-12 bg[url(/src/assets/bannerBg.png)] bg-no-repeat bg-center bg-cover">
+        <div className="pt-12 bg-[url('/src/assets/bannerBg.png')] bg-no-repeat bg-center bg-cover">
             <Container>
                 <Flex>
                     <div className="w-[783px] relative">
@@ -43,7 +43,7 @@ const Banner = () => {
         </div>
 
         
-       <div className="pt-12 bg[url(/src/assets/bannerBg.png)] bg-no-repeat bg-center bg-cover">
+       <div className="pt-12 bg-[url('/src/assets/bannerBg.png')] bg-no-repeat bg-center bg-cover">
             <Container>
                 <Flex>
                     <div className="w-[783px] relative">
