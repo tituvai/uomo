@@ -7,7 +7,7 @@ import Image from '/src/components/Image'
 import Button from '../Button'
 import bnnerOne from '/src/assets/BannerOne.png'
 import bnner2 from '/src/assets/banner2.png'
-import bannerBg from '/src/assets/bannerBg.png'
+
 
 
 const Banner = () => {
@@ -26,7 +26,7 @@ const Banner = () => {
 
       <div className="slider-container">
       <Slider {...settings} className="custom-dots" >
-        <div className="pt-12 bg-no-repeat bg-center bg-cover" style={{ backgroundImage: `url(${bannerBg})` }}>
+        <div className="pt-12 bg[url(/src/assets/bannerBg.png)] bg-no-repeat bg-center bg-cover">
             <Container>
                 <Flex>
                     <div className="w-[783px] relative">
@@ -43,7 +43,7 @@ const Banner = () => {
         </div>
 
         
-       <div className="pt-12 bg-no-repeat bg-center bg-cover" style={{ backgroundImage: `url(${bannerBg})` }}>
+       <div className="pt-12 bg[url(/src/assets/bannerBg.png)] bg-no-repeat bg-center bg-cover">
             <Container>
                 <Flex>
                     <div className="w-[783px] relative">
