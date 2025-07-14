@@ -11,6 +11,8 @@ import Bage from '../../assets/icon/Bage'
 import Bars from '../../assets/icon/Bars'
 
 const Header = () => {
+
+    
   return (
     <>
         <div className="py-9">

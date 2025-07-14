@@ -22,8 +22,10 @@ import kriby1 from '/src/assets/kriby (2).png'
 import zessi from '/src/assets/zessi.png'
 import zessi1 from '/src/assets/zessi1.png'
 
+
 const TrendProduct = () => {
   return (
+    <>
     <div className="py-13">
         <Container>
             <div className="text-center">
@@ -42,25 +44,25 @@ const TrendProduct = () => {
                     <Product productSrc={botanclat} productAlt={botanclat} opacitySrc={botanclat1} opacityAlt={botanclat1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$27'}/>
                 </div>
                 <div className="w-[330px]">
-                    <Product productSrc={calvin} productAlt={calvin} opacitySrc={calvin1} opacityAlt={calvin1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$27'}/>
+                    <Product productSrc={calvin} productAlt={calvin} opacitySrc={calvin1} opacityAlt={calvin1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$47'}/>
                 </div>
                 <div className="w-[330px]">
-                    <Product productSrc={clabkiit} productAlt={clabkiit} opacitySrc={clabkiit1} opacityAlt={clabkiit1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$27'}/>
+                    <Product productSrc={clabkiit} productAlt={clabkiit} opacitySrc={clabkiit1} opacityAlt={clabkiit1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$84'}/>
                 </div>
                 <div className="w-[330px]">
-                    <Product productSrc={cotton} productAlt={cotton} opacitySrc={cotton1} opacityAlt={cotton1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$27'}/>
+                    <Product productSrc={cotton} productAlt={cotton} opacitySrc={cotton1} opacityAlt={cotton1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$27'} productDelete={'$70'}/>
                 </div>
                 <div className="w-[330px]">
-                    <Product productSrc={cropped} productAlt={cropped} opacitySrc={cropped1} opacityAlt={cropped1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$27'}/>
+                    <Product productSrc={cropped} productAlt={cropped} opacitySrc={cropped1} opacityAlt={cropped1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$20'}/>
                 </div>
                 <div className="w-[330px]">
-                    <Product productSrc={jacket} productAlt={jacket} opacitySrc={jacket1} opacityAlt={jacket1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$27'}/>
+                    <Product productSrc={jacket} productAlt={jacket} opacitySrc={jacket1} opacityAlt={jacket1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$87'} productDelete={'$120'}/>
                 </div>
                 <div className="w-[330px]">
-                    <Product productSrc={kriby} productAlt={kriby} opacitySrc={kriby1} opacityAlt={kriby1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$27'}/>
+                    <Product productSrc={kriby} productAlt={kriby} opacitySrc={kriby1} opacityAlt={kriby1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$130'}/>
                 </div>
                 <div className="w-[330px]">
-                    <Product productSrc={zessi} productAlt={zessi} opacitySrc={zessi1} opacityAlt={zessi1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$27'}/>
+                    <Product productSrc={zessi} productAlt={zessi} opacitySrc={zessi1} opacityAlt={zessi1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$50'}/>
                 </div>
             </Flex>
             <div className="text-center py-10">
@@ -68,6 +70,7 @@ const TrendProduct = () => {
             </div>
         </Container>
     </div>
+    </>
   )
 }
 
