@@ -1,5 +1,5 @@
 import React from 'react'
-import Slider from "react-slick";
+import Slider from "react-slick"
 import Container from '/src/components/Container'
 import Flex from '/src/components/Flex'
 import Hadding from '/src/components/Hadding'
@@ -7,6 +7,7 @@ import Image from '/src/components/Image'
 import Button from '../Button'
 import bnnerOne from '/src/assets/BannerOne.png'
 import bnner2 from '/src/assets/Banner2.png'
+import bannerBg from '/src/assets/bannerBg.png'
 
 
 const Banner = () => {
@@ -25,7 +26,7 @@ const Banner = () => {
 
       <div className="slider-container">
       <Slider {...settings} className="custom-dots" >
-        <div className="pt-12 bg-[url('/bannerBg.png')] bg-no-repeat bg-center bg-cover">
+        <div className="pt-12 bg-no-repeat bg-center bg-cover" style={{ backgroundImage: `url(${bannerBg})` }}>
             <Container>
                 <Flex>
                     <div className="w-[783px] relative">
@@ -42,7 +43,7 @@ const Banner = () => {
         </div>
 
         
-       <div className="pt-12 bg-[url('/bannerBg.png')] bg-no-repeat bg-center bg-cover">
+       <div className="pt-12 bg-no-repeat bg-center bg-cover" style={{ backgroundImage: `url(${bannerBg})` }}>
             <Container>
                 <Flex>
                     <div className="w-[783px] relative">
