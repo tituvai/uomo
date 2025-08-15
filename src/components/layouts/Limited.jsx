@@ -31,9 +31,9 @@ const Limited = () => {
                 <div className="text-center pb-10">
                     <Hadding className={'text-[35px] text-menuC font-mixed'} text={<><span>LIMITED</span><span className='font-extrabold'>EDITION</span></>} as={'h3'}/>
                 </div>
-                <div className="-mx-4 pb-12">
+                <div className="-ml-5 pb-12">
                       <Slider {...settings}>
-                    <div className='ml-4'>
+                    <div className='pl-4'>
                         <Product productSrc={cap} productAlt={cap} productTitle={'Hosking Blue Area Rug'} productPrice={'$62'}/>
                     </div>
                     <div className='pl-4'>

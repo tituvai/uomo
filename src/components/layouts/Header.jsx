@@ -18,19 +18,24 @@ const Header = () => {
         <div className="py-9">
             <Container>
                 <Flex>
-                    <div className="flex items-center gap-x-13 text-menuC">
+                    <div className=" text-menuC flex items-center gap-x-20">
                         <Image imgSrc={logo} imgAlt={logo}/>
-                        <div className="">
-                            <ul className='flex items-center gap-x-10'>
-                               <Link to={'/'}><li className='text-ms text-menuC font-medium leading-7 group relative'><div className=" w-0 group-hover:w-[30px] h-[2px] bg-menuC transition-all duration-500 absolute bottom-0 left-0"></div>HOME</li></Link>
-                               <Link to={'/'}><li className='text-ms text-menuC font-medium leading-7 group relative'><div className=" w-0 group-hover:w-[30px] h-[2px] bg-menuC transition-all duration-500 absolute bottom-0 left-0"></div>SHOP</li></Link>
-                               <Link to={'/'}><li className='text-ms text-menuC font-medium leading-7 group relative'><div className=" w-0 group-hover:w-[60px] h-[2px] bg-menuC transition-all duration-500 absolute bottom-0 left-0"></div>COLLECTION</li></Link>
-                               <Link to={'/'}><li className='text-ms text-menuC font-medium leading-7 group relative'><div className=" w-0 group-hover:w-[50px] h-[2px] bg-menuC transition-all duration-500 absolute bottom-0 left-0"></div>JOURNAL</li></Link>
-                               <Link to={'/'}><li className='text-ms text-menuC font-medium leading-7 group relative'><div className=" w-0 group-hover:w-[65px] h-[2px] bg-menuC transition-all duration-500 absolute bottom-0 left-0"></div>LOOKBOOK</li></Link>
-                               <Link to={'/'}><li className='text-ms text-menuC font-medium leading-7 group relative'><div className=" w-0 group-hover:w-[30px] h-[2px] bg-menuC transition-all duration-500 absolute bottom-0 left-0"></div>PAGES</li></Link>                                               
+
+                         <ul className='flex items-center gap-x-10'>
+                                  {
+                                        [
+                                          {name:'HOME', path: '/'},
+                                          {name:'SHOP', path: '/shop'},
+                                          {name:'BLOG', path: '/blog'},
+                                          {name:'LOOKBOOK', path: '/lookbook'},
+                                          {name:'CONTACT', path: '/contact'},
+                                        ].map((item, index)=>(
+                                          <Link to={item.path} key={index}><li className='text-ms text-menuC font-medium leading-7 group relative'><span className='w-0 group-hover:w-full h-[2px] bg-menuC transition-all duration-500 absolute bottom-0 left-0'></span>{item.name}</li></Link>
+                                        ))
+                                      }                                              
                             </ul>
-                        </div>
                     </div>
+
                     <div className="flex items-center gap-7">
                         <Link to={'/'}><Search/></Link>
                         <Link to={'/'}><User/></Link>
