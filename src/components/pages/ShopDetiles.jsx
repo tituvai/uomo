@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -17,6 +17,14 @@ import NextArrow from "../NextArrow";
 import PrevArrow from "../PrevArrow";
 import calvin from '/src/assets/calvin.png'
 import calvinOne from '/src/assets/calvin1.png'
+import kriby from '/src/assets/kriby.png'
+import kribyOne from '/src/assets/kriby (2).png'
+import clabkiit from '/src/assets/clabkiit.png'
+import clabkiitOne from '/src/assets/clabkiit (2).png'
+import botanclat from '/src/assets/botanclat.png'
+import botanclatOne from '/src/assets/botanclat1.png'
+import Cotton from '/src/assets/cotton.png'
+import CottonOne from '/src/assets/cotton1.png'
 
 
 
@@ -54,6 +62,11 @@ const ShopDetiles = () => {
      nextArrow:<NextArrow/>,
     prevArrow:<PrevArrow/>
   };
+
+  // Active Class 
+  
+ 
+  
   return (
     <>
     <div className="">
@@ -111,9 +124,9 @@ const ShopDetiles = () => {
             </div>
 
             <div className="flex items-center justify-center gap-x-20 pt-20">
-              <Hadding className={'text-base text-menuC font-medium'} text={'DESCRIPTION'} as={'h4'}/>
-              <Hadding className={'text-base text-menuC font-medium'} text={'ADDITIONAL INFORMATION '} as={'h4'}/>
-              <Hadding className={'text-base text-menuC font-medium'} text={'REVIEWS (3)'} as={'h4'}/>                                
+              <Hadding className={'text-base text-menuC font-medium relative group'} text={<><span className="w-0 h-[2px] bg-menuC group-hover:w-full absolute left-0-0 bottom-0  transition-all duration-500"></span><span>DESCRIPTION</span></>} as={'h4'}/>
+              <Hadding className={'text-base text-menuC font-medium relative group'} text={<><span className="w-0 h-[2px] bg-menuC group-hover:w-full absolute left-0-0 bottom-0  transition-all duration-500"></span><span>ADDITIONAL INFORMATION</span></>} as={'h4'}/>
+              <Hadding className={'text-base text-menuC font-medium relative group'} text={<><span className="w-0 h-[2px] bg-menuC group-hover:w-full absolute left-0-0 bottom-0  transition-all duration-500"></span><span>REVIEWS (3)</span></>} as={'h4'}/>                                
             </div>
 
             <div className="w-[940px] m-auto pt-15">
@@ -147,16 +160,16 @@ const ShopDetiles = () => {
                   <Product productSrc={calvin} productAlt={'cropped.png'} productTitle={'Calvin Shorts'} productPrice={'$62'} opacitySrc={calvinOne}/>
                 </div>
                 <div className=" pl-4">
-                   <Product productSrc={crapped} productAlt={'cropped.png'} productTitle={'Kirby T-Shirt'} productPrice={'$7.36'} opacitySrc={crappadOne}/>
+                   <Product productSrc={kriby} productAlt={'kriby.png'} productTitle={'Kirby T-Shirt'} productPrice={'$70'} opacitySrc={kribyOne} opacityAlt={'kriby (2).png'}/>
                 </div>
                 <div className=" pl-4">
-                   <Product productSrc={crapped} productAlt={'cropped.png'} productTitle={'Cableknit Shawl'} productPrice={'$7.36'} opacitySrc={crappadOne}/>
+                   <Product productSrc={clabkiit} productAlt={'clabkiit.png'} productTitle={'Cableknit Shawl'} productPrice={'$40'} opacitySrc={clabkiitOne} opacityAlt={'clabkiit (2).png'}/>
                 </div>
                 <div className=" pl-4">
-                   <Product productSrc={crapped} productAlt={'cropped.png'} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$7.36'} opacitySrc={crappadOne}/>
+                   <Product productSrc={botanclat} productAlt={'botanclat.png'} productTitle={'Shirt In Botanical Cheetah Print'} productPrice={'$54'} opacitySrc={botanclatOne} opacityAlt={'botanclat1.png'}/>
                 </div>
                 <div className=" pl-4">
-                  <Product productSrc={crapped} productAlt={'cropped.png'} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$7.36'} opacitySrc={crappadOne}/>
+                  <Product productSrc={Cotton} productAlt={'Cotton.png'} productTitle={'Cotton Jersey T-Shirt'} productPrice={'$55'} opacitySrc={CottonOne} opacityAlt={'Cotton1.png'}/>
                 </div>      
               </Slider>
             </div>

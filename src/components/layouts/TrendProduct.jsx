@@ -41,28 +41,44 @@ const TrendProduct = () => {
             </div>
             <Flex className={'flex-wrap gap-y-6 py-7'}>
                 <div className="w-[330px]">
+                    <Link to={'/shopDetiles'}>
                     <Product productSrc={botanclat} productAlt={botanclat} opacitySrc={botanclat1} opacityAlt={botanclat1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$27'}/>
+                    </Link>
                 </div>
                 <div className="w-[330px]">
+                    <Link to={'/shopDetiles'}>
                     <Product productSrc={calvin} productAlt={calvin} opacitySrc={calvin1} opacityAlt={calvin1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$47'}/>
+                    </Link>
                 </div>
                 <div className="w-[330px]">
+                    <Link to={'/shopDetiles'}>
                     <Product productSrc={clabkiit} productAlt={clabkiit} opacitySrc={clabkiit1} opacityAlt={clabkiit1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$84'}/>
+                    </Link>
                 </div>
                 <div className="w-[330px]">
+                    <Link to={'/shopDetiles'}>
                     <Product productSrc={cotton} productAlt={cotton} opacitySrc={cotton1} opacityAlt={cotton1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$27'} productDelete={'$70'}/>
+                    </Link>
                 </div>
                 <div className="w-[330px]">
+                    <Link to={'/shopDetiles'}>
                     <Product productSrc={cropped} productAlt={cropped} opacitySrc={cropped1} opacityAlt={cropped1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$20'}/>
+                    </Link>
                 </div>
                 <div className="w-[330px]">
+                    <Link to={'/shopDetiles'}>
                     <Product productSrc={jacket} productAlt={jacket} opacitySrc={jacket1} opacityAlt={jacket1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$87'} productDelete={'$120'}/>
+                    </Link>
                 </div>
                 <div className="w-[330px]">
+                    <Link to={'/shopDetiles'}>
                     <Product productSrc={kriby} productAlt={kriby} opacitySrc={kriby1} opacityAlt={kriby1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$130'}/>
+                    </Link>
                 </div>
                 <div className="w-[330px]">
+                    <Link to={'/shopDetiles'}>
                     <Product productSrc={zessi} productAlt={zessi} opacitySrc={zessi1} opacityAlt={zessi1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$50'}/>
+                    </Link>
                 </div>
             </Flex>
             <div className="text-center py-10">

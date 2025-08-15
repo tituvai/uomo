@@ -40,7 +40,7 @@ const Header = () => {
                         <Link to={'/'}><Search/></Link>
                         <Link to={'/'}><User/></Link>
                         <Link to={'/'}><Heart/></Link>
-                        <Link to={'/'}><Bage/></Link>
+                        <Link to={'/card'}><Bage/></Link>
                         <Link to={'/'}><Bars/></Link>   
                     </div>
                 </Flex>

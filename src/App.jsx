@@ -8,6 +8,7 @@ import Lookbook from './components/pages/Lookbook'
 import Blog from './components/pages/Blog'
 import Contact from './components/pages/Contact'
 import ShopDetiles from './components/pages/ShopDetiles'
+import Card from './components/pages/Card'
 
 function App() {
  
@@ -22,6 +23,7 @@ function App() {
         <Route path='/lookbook' element={<Lookbook/>}/>
         <Route path='contact' element={<Contact/>}/>
         <Route path='/shopDetiles' element={<ShopDetiles/>}/>
+        <Route path='/card' element={<Card/>}/>
         </Route>
       </Routes>
     </>
