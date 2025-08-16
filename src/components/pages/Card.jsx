@@ -10,6 +10,7 @@ import cartTwo from '/src/assets/cart2.png'
 import { MdOutlineClear } from "react-icons/md";
 import Button from '../Button'
 import SubMitBtn from '../SubMitBtn'
+import { Link } from 'react-router-dom'
 const Card = () => {
   return (
     <>
@@ -112,7 +113,7 @@ const Card = () => {
                 <Flex className={'py-10'}>
                     <div className="w-[400px] relative border border-categoriC">
                         <input className=' p-4 placeholder:text-base placeholder:text-deleteC outline-0 ' type="text" placeholder='Coupon Code' />
-                        <span className='text-base text-menuC font-medium absolute right-5 top-1/2 -translate-y-1/2'>APPLY COUPON</span>
+                        <span className='text-base text-menuC font-medium absolute right-5 top-1/2 -translate-y-1/2 cursor-pointer'>APPLY COUPON</span>
                     </div>
                     <div className="">
                         <button className='text-base text-menuC px-7 py-4 bg-footerBg cursor-pointer'>UPDATE CART</button>
@@ -159,7 +160,7 @@ const Card = () => {
                 </div>
             </div>
                 <div className="pt-5">
-                <SubMitBtn className={'w-full'} submit={'PROCEED TO CHECKOUT'}/>
+                <Link to={'/checkout'}><SubMitBtn className={'w-full'} submit={'PROCEED TO CHECKOUT'}/></Link>
             </div>
             </div>
             </div>
