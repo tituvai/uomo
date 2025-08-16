@@ -10,6 +10,7 @@ import Contact from './components/pages/Contact'
 import ShopDetiles from './components/pages/ShopDetiles'
 import Card from './components/pages/Card'
 import Checkout from './components/pages/Checkout'
+import OderConpleted from './components/pages/OderConpleted'
 
 function App() {
  
@@ -26,6 +27,7 @@ function App() {
         <Route path='/shopDetiles' element={<ShopDetiles/>}/>
         <Route path='/card' element={<Card/>}/>
         <Route path='/checkout' element={<Checkout/>}/>
+        <Route path='/oderConpleat' element={<OderConpleted/>}/>
         </Route>
       </Routes>
     </>

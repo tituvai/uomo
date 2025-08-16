@@ -5,6 +5,7 @@ import Flex from '../Flex'
 import Peragrap from '../Peragrap'
 import Button from '../Button'
 import SubMitBtn from '../SubMitBtn'
+import { Link } from 'react-router-dom'
 
 const Checkout = () => {
   return (
@@ -91,7 +92,7 @@ const Checkout = () => {
                            </div>
                         </div>
                     </div>
-                    <SubMitBtn className={'w-full mt-5'} submit={'PLACE ORDER'}/>
+                    <Link to={'/oderConpleat'}><SubMitBtn className={'w-full mt-5'} submit={'PLACE ORDER'}/></Link>   
                 </div>
             </div>
         </Container>
