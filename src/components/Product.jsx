@@ -6,7 +6,8 @@ import Hadding from './Hadding'
 import { Link } from 'react-router-dom';
 
 
-const Product = ({productSrc, productAlt, productPrice, productDelete, productTitle, opacitySrc, opacityAlt}) => {
+
+const Product = ({productSrc, productAlt, productPrice, productDelete, productTitle, opacitySrc, opacityAlt, imgClear}) => {
   return (
     <>
         <div className="relative group">
@@ -19,6 +20,7 @@ const Product = ({productSrc, productAlt, productPrice, productDelete, productTi
                 <CiHeart className='text-deleteC'/>
             </Flex>
             <Hadding className={'text-base text-menuC'} text={productTitle} as={'h4'}/>
+            <div className="absolute top-5 left-5 opacity-0 group-hover:opacity-100  p-2">{imgClear}</div>
             <div className="flex items-center gap-x-2 py-2">
                 <Hadding className={'text-base text-menuC'} text={productPrice} as={'h4'}/>
                 <span className='text-base text-deleteC'><del>{productDelete}</del></span>

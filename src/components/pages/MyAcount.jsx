@@ -5,6 +5,11 @@ import { Link } from 'react-router-dom'
 import Peragrap from '../Peragrap'
 import Flex from '/src/components/Flex'
 import SubMitBtn from '/src/components/SubMitBtn'
+import Product from '../Product'
+import jacket from '/src/assets/jacket.png'
+import kriby from '/src/assets/kriby.png'
+import clabkiit from '/src/assets/clabkiit.png'
+import { MdOutlineClear } from "react-icons/md";
 
 const MyAcount = () => {
   return (
@@ -25,7 +30,7 @@ const MyAcount = () => {
                         {name: 'WISHLIST', path: '/'},
                         {name: 'LOGOUT', path: '/'}
                     ].map((item, index)=>(
-                       <Link to={item.path} key={index}><li className={'text-base inline-block text-menuC font-medium leading-12.5 relative group'}><span className='w-0 h-[2px] bg-menuC  group-hover:w-full absolute left-0 bottom-3 transition-all duration-500'></span>{item.name}</li></Link>
+                       <Link to={item.path} key={index}><li className={'text-sm inline-block text-menuC font-medium leading-12.5 relative group'}><span className='w-0 h-[2px] bg-menuC  group-hover:w-full absolute left-0 bottom-3 transition-all duration-500'></span>{item.name}</li></Link>
                     ))
                     }
                     </ul>
@@ -94,7 +99,7 @@ const MyAcount = () => {
 
                 {/* Address Part Start  */}
 
-                <div className="w-[70%]">
+                {/* <div className="w-[70%]">
                     <Peragrap peraText={"The following addresses will be used on the checkout page by default."}/>
                     <div className="flex justify-between pt-15">
                         <div className="">
@@ -120,12 +125,43 @@ const MyAcount = () => {
                             <Hadding className={'text-sm text-menuC font-medium border-b-2 border-menuC'} text={'EDIT'} as={'h3'}/>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 {/* Address Part End */}
 
                 {/* Acount Details Part Start  */}
-                
+                {/* <div className="w-[70%]">
+                    <form>
+                        <div className="flex justify-between">
+                            <input className='w-[48%] text-base text-menuC p-5 border-2 border-categoriC placeholder:text-base placeholder:text-deleteC' type="text" placeholder='First Name' />
+                            <input className='w-[48%] text-base text-menuC p-5 border-2 border-categoriC placeholder:text-base placeholder:text-deleteC' type="text" placeholder='Last Name' />
+                        </div>
+                            <input className='w-full text-base text-menuC p-5 border-2 border-categoriC placeholder:text-base placeholder:text-deleteC mt-5' type="text" placeholder='Display Name' />
+                            <input className='w-full text-base text-menuC p-5 border-2 border-categoriC placeholder:text-base placeholder:text-deleteC mt-5' type="text" placeholder='Email Address' />
+                            <div className="pt-5"><label className='text-base text-menuC font-medium' htmlFor="#">PASSWORD CHANGE</label></div>
+                            <input className='w-full text-base text-menuC p-5 border-2 border-categoriC placeholder:text-base placeholder:text-deleteC mt-5' type="text" placeholder='Current password (leave blank to leave unchanged) ' />
+                            <input className='w-full text-base text-menuC p-5 border-2 border-categoriC placeholder:text-base placeholder:text-deleteC mt-5' type="text" placeholder='New password (leave blank to leave unchanged) ' />
+                            <input className='w-full text-base text-menuC p-5 border-2 border-categoriC placeholder:text-base placeholder:text-deleteC mt-5' type="text" placeholder='New password (Confirm new password ) ' />
+                            <SubMitBtn className={'px-13 mt-8'} submit={'SAVE CHANGES'}/>
+                    </form>
+                </div> */}
                 {/* Acount Details Part End */}
+
+                {/* Wishlist Part Start  */}
+
+                <div className="w-[70%]">
+                    <Flex>
+                        <div className="w-[32%]">
+                            <Product productSrc={jacket} productTitle={'Colorful Jacket'} productPrice={'$29'} imgClear={<><MdOutlineClear/></>}/>
+                        </div>
+                        <div className="w-[32%]">
+                            <Product productSrc={kriby} productTitle={'Shirt In Botanical Cheetah Print'} productPrice={'$29'} imgClear={<><MdOutlineClear/></>}/>
+                        </div>
+                        <div className="w-[32%]">
+                            <Product productSrc={clabkiit} productTitle={'Cotton Jersey T-Shirt'} productPrice={'$29'} imgClear={<><MdOutlineClear/></>}/>
+                        </div>
+                    </Flex>
+                </div>
+                {/* Wishlist Part End */}
             </div>
         </Container>
     </div>
