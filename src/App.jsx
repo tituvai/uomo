@@ -11,6 +11,7 @@ import ShopDetiles from './components/pages/ShopDetiles'
 import Card from './components/pages/Card'
 import Checkout from './components/pages/Checkout'
 import OderConpleted from './components/pages/OderConpleted'
+import MyAcount from './components/pages/MyAcount'
 
 function App() {
  
@@ -28,6 +29,7 @@ function App() {
         <Route path='/card' element={<Card/>}/>
         <Route path='/checkout' element={<Checkout/>}/>
         <Route path='/oderConpleat' element={<OderConpleted/>}/>
+        <Route path='/myAcount' element={<MyAcount/>}/>
         </Route>
       </Routes>
     </>
