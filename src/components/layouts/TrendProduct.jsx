@@ -26,7 +26,7 @@ import zessi1 from '/src/assets/zessi1.png'
 const TrendProduct = () => {
   return (
     <>
-    <div className="py-13">
+    <div className="py-13 px-3 lg:px-0">
         <Container>
             <div className="text-center">
                 <Hadding className={'text-[35px] text-menuC font-mixed'} text={<><span>Our Trendy</span><span className='font-bold'>Products</span></>} as={'h3'}/>
@@ -40,44 +40,44 @@ const TrendProduct = () => {
                 </ul>
             </div>
             <Flex className={'flex-wrap gap-y-6 py-7'}>
-                <div className="w-[330px]">
+                <div className="w-[48%] lg:w-[24%]">
                     <Link to={'/shopDetiles'}>
-                    <Product productSrc={botanclat} productAlt={botanclat} opacitySrc={botanclat1} opacityAlt={botanclat1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$27'}/>
+                    <Product productSrc={botanclat} productAlt={'botanclat.png'} opacitySrc={botanclat1} opacityAlt={'botanclat1.png'} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$27'}/>
                     </Link>
                 </div>
-                <div className="w-[330px]">
+                <div className="w-[48%] lg:w-[24%]">
                     <Link to={'/shopDetiles'}>
-                    <Product productSrc={calvin} productAlt={calvin} opacitySrc={calvin1} opacityAlt={calvin1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$47'}/>
+                    <Product productSrc={calvin} productAlt={'calvin.png'} opacitySrc={calvin1} opacityAlt={'calvin1.png'} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$47'}/>
                     </Link>
                 </div>
-                <div className="w-[330px]">
+                <div className="w-[48%] lg:w-[24%]">
                     <Link to={'/shopDetiles'}>
-                    <Product productSrc={clabkiit} productAlt={clabkiit} opacitySrc={clabkiit1} opacityAlt={clabkiit1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$84'}/>
+                    <Product productSrc={clabkiit} productAlt={'clabkiit.png'} opacitySrc={clabkiit1} opacityAlt={'clabkiit (2).png'} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$84'}/>
                     </Link>
                 </div>
-                <div className="w-[330px]">
+                <div className="w-[48%] lg:w-[24%]">
                     <Link to={'/shopDetiles'}>
-                    <Product productSrc={cotton} productAlt={cotton} opacitySrc={cotton1} opacityAlt={cotton1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$27'} productDelete={'$70'}/>
+                    <Product productSrc={cotton} productAlt={'cotton.png'} opacitySrc={cotton1} opacityAlt={'cotton1.png'} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$27'} productDelete={'$70'}/>
                     </Link>
                 </div>
-                <div className="w-[330px]">
+                <div className="w-[48%] lg:w-[24%]">
                     <Link to={'/shopDetiles'}>
-                    <Product productSrc={cropped} productAlt={cropped} opacitySrc={cropped1} opacityAlt={cropped1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$20'}/>
+                    <Product productSrc={cropped} productAlt={'cropped.png'} opacitySrc={cropped1} opacityAlt={'cropped1.png'} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$20'}/>
                     </Link>
                 </div>
-                <div className="w-[330px]">
+                <div className="w-[48%] lg:w-[24%]">
                     <Link to={'/shopDetiles'}>
-                    <Product productSrc={jacket} productAlt={jacket} opacitySrc={jacket1} opacityAlt={jacket1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$87'} productDelete={'$120'}/>
+                    <Product productSrc={jacket} productAlt={'jacket.png'} opacitySrc={jacket1} opacityAlt={'jacket1.png'} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$87'} productDelete={'$120'}/>
                     </Link>
                 </div>
-                <div className="w-[330px]">
+                <div className="w-[48%] lg:w-[24%]">
                     <Link to={'/shopDetiles'}>
-                    <Product productSrc={kriby} productAlt={kriby} opacitySrc={kriby1} opacityAlt={kriby1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$130'}/>
+                    <Product productSrc={kriby} productAlt={'kriby.png'} opacitySrc={kriby1} opacityAlt={'kriby (2).png'} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$130'}/>
                     </Link>
                 </div>
-                <div className="w-[330px]">
+                <div className="w-[48%] lg:w-[24%]">
                     <Link to={'/shopDetiles'}>
-                    <Product productSrc={zessi} productAlt={zessi} opacitySrc={zessi1} opacityAlt={zessi1} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$50'}/>
+                    <Product productSrc={zessi} productAlt={'zessi.png'} opacitySrc={zessi1} opacityAlt={'zessi1.png'} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$50'}/>
                     </Link>
                 </div>
             </Flex>
