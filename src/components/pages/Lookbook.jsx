@@ -14,15 +14,15 @@ import Button from '../Button'
 const Lookbook = () => {
   return (
     <>
-    <div className="bg-categoriC py-10">
+    <div className="bg-categoriC py-10 text-center lg:text-left">
       <Container>
         <Hadding className={'text-[35px] text-menuC font-bold'} text={'LOOKBOOK'} as={'h3'}/>
       </Container>
     </div>
-    <div className="py-30">
+    <div className="py-10 lg:py-30">
       <Container>
-        <Flex>
-          <div className="w-[49%]">
+        <Flex className={'flex-col md:flex-row gap-y-8'}>
+          <div className="lg:w-[49%]">
             <div className=" relative group">
               <Image imgSrc={lookOne}/>
               <div className="w-[95%] m-auto h-[365px] border-white absolute top-4 left-4 border-y-3 scale-y-40 group-hover:scale-100 opacity-0 group-hover:opacity-100 duration-700 z-20"></div>
@@ -45,7 +45,7 @@ const Lookbook = () => {
             </div>
           </div>
          
-            <div className="w-[49%] relative group">
+            <div className="lg:w-[49%] relative group">
               <Image imgSrc={lookThree}/>
               <div className="w-[95%] m-auto h-[795px] border-white absolute top-4 left-4 border-y-3 scale-y-40 group-hover:scale-100 opacity-0 group-hover:opacity-100 duration-700 z-20"></div>
               <div className="w-[95%] m-auto h-[795px] border-white absolute top-4 left-4 border-x-3 scale-x-40 group-hover:scale-100 opacity-0 group-hover:opacity-100 duration-700 z-20"></div>
@@ -56,8 +56,8 @@ const Lookbook = () => {
               </div>
             </div>
         </Flex>
-        <Flex className={'pt-8'}>
-           <div className="w-[49%] relative group">
+        <Flex className={'pt-8 flex-col md:flex-row gap-y-8'}>
+           <div className="lg:w-[49%] relative group">
               <Image imgSrc={lookFour}/>
               <div className="w-[95%] m-auto h-[795px] border-white absolute top-4 left-4 border-y-3 scale-y-40 group-hover:scale-100 opacity-0 group-hover:opacity-100 duration-700 z-20"></div>
               <div className="w-[95%] m-auto h-[795px] border-white absolute top-4 left-4 border-x-3 scale-x-40 group-hover:scale-100 opacity-0 group-hover:opacity-100 duration-700 z-20"></div>
@@ -67,7 +67,7 @@ const Lookbook = () => {
                 <Hadding className={'text-[26px] text-menuC font-medium'} text={'Knee-length Cotton Shorts'} as={'h6'}/>
               </div>
             </div>
-          <div className="w-[49%]">
+          <div className="lg:w-[49%]">
             <div className=" relative group">
               <Image imgSrc={lookFive}/>
               <div className="w-[95%] m-auto h-[365px] border-white absolute top-4 left-4 border-y-3 scale-y-40 group-hover:scale-100 opacity-0 group-hover:opacity-100 duration-700 z-20"></div>
@@ -92,7 +92,7 @@ const Lookbook = () => {
          
            
         </Flex>
-        <div className="text-center pt-20">
+        <div className="text-center pt-10 lg:pt-20">
           <Button btnText={'SHOW MORE'}/>
         </div>
       </Container>

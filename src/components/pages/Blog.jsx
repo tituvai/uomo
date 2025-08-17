@@ -17,9 +17,9 @@ const Blog = () => {
     <>
     <div className="bg-categoriC py-10">
         <Container>
-            <div className="">
+            <div className="px-3 lg:px-0">
                 <Hadding className={'text-[35px] text-menuC font-bold'} text={'THE BLOG'} as={'h3'}/>
-                <ul className='flex items-center gap-x-8 pt-10'>
+                <ul className='flex items-center gap-x-8 pt-10 flex-wrap gap-3'>
                     {
                         [
                             {name:'ALL ', path:'/'},
@@ -37,25 +37,25 @@ const Blog = () => {
             </div>
         </Container>
     </div>
-    <div className="py-20">
+    <div className="px-3 lg:px-0 py-20">
         <Container>
             <Flex className={'flex-wrap gap-y-10'}>
-                <div className="w-[32%]">
+                <div className=" lg:w-[32%]">
                     <BlogProduct blogSrc={blogOne} blogAlt={'blog-5.jpg'} blogText={'Woman with good shoes is never be ugly place'} blogPera={'Midst one brought greater also morning green saying had good. Open stars day let over gathered, grass face one every light of under.'}/>
                 </div>
-                <div className="w-[32%]">
+                <div className=" lg:w-[32%]">
                     <BlogProduct blogSrc={blogTwo} blogAlt={'blog-6.jpg'} blogText={'Heaven upon heaven moveth every have.'} blogPera={'Midst one brought greater also morning green saying had good. Open stars day let over gathered, grass face one every light of under.'}/>
                 </div>
-                <div className="w-[32%]">
+                <div className=" lg:w-[32%]">
                     <BlogProduct blogSrc={blogThree} blogAlt={'blog-7.jpg'} blogText={"Tree doesn't good void, waters without created"} blogPera={'Midst one brought greater also morning green saying had good. Open stars day let over gathered, grass face one every light of under.'}/>
                 </div>
-                <div className="w-[32%]">
+                <div className=" lg:w-[32%]">
                     <BlogProduct blogSrc={blogFour} blogAlt={'blog-8.jpg'} blogText={'Given Set was without from god divide rule Hath'} blogPera={'Midst one brought greater also morning green saying had good. Open stars day let over gathered, grass face one every light of under.'}/>
                 </div>
-                <div className="w-[32%]">
+                <div className=" lg:w-[32%]">
                     <BlogProduct blogSrc={blogFive} blogAlt={'blog-9.jpg'} blogText={'Tree earth fowl given moveth deep lesser After'} blogPera={'Midst one brought greater also morning green saying had good. Open stars day let over gathered, grass face one every light of under.'}/>
                 </div>
-                <div className="w-[32%]">
+                <div className=" lg:w-[32%]">
                     <BlogProduct blogSrc={blogSix} blogAlt={'blog-10.jpg'} blogText={'Us yielding Fish sea night night the said him two'} blogPera={'Midst one brought greater also morning green saying had good. Open stars day let over gathered, grass face one every light of under.'}/>
                 </div>
             </Flex>
