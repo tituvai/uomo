@@ -16,9 +16,9 @@ const MyAcount = () => {
     <>
     <div className="pb-50">
         <Container>
-            <Hadding className={'text-[35px] text-menuC font-bold py-10'} text={'My account'} as={'h3'}/>
-            <div className="flex">
-                <div className="w-[25%]">
+            <Hadding className={'text-[35px] text-center lg:text-left text-menuC font-bold py-10'} text={'My account'} as={'h3'}/>
+            <div className="lg:flex">
+                <div className="lg:w-[25%] px-5 lg:p-0 pb-10">
                     <ul className='flex flex-col'>
                         {
                     [
@@ -30,7 +30,7 @@ const MyAcount = () => {
                         {name: 'WISHLIST', path: '/'},
                         {name: 'LOGOUT', path: '/'}
                     ].map((item, index)=>(
-                       <Link to={item.path} key={index}><li className={'text-sm inline-block text-menuC font-medium leading-12.5 relative group'}><span className='w-0 h-[2px] bg-menuC  group-hover:w-full absolute left-0 bottom-3 transition-all duration-500'></span>{item.name}</li></Link>
+                       <Link to={item.path} key={index}><li className={'text-sm inline-block text-menuC font-medium leading-8 lg:leading-12.5 relative group'}><span className='w-0 h-[2px] bg-menuC  group-hover:w-full absolute left-0 bottom-3 transition-all duration-500'></span>{item.name}</li></Link>
                     ))
                     }
                     </ul>
@@ -38,70 +38,72 @@ const MyAcount = () => {
 
                 {/* Dasbord Part Start  */}
 
-                {/* <div className=" 70%">
+                <div className="lg:w-[70%] px-3 lg:px-0">
                     <Hadding className={'text-base text-menuC font-normal'} text={<><span>Hello</span> <span className='font-medium'>alitfn58</span> <span>(not</span> <span className='font-medium'>alitfn58?</span> <Link to={'/'}>Log out</Link> <span>)</span></>} as={'h4'}/>
-                    <Peragrap className={'pt-5 pr-85'} peraText={<><span>From your account dashboard you can view your</span> <Link to={'/'} className='border-b-1 border-menuC'>recent orders,</Link> <span>manage your</span> <Link to={'/'} className='border-b-1 border-menuC'>shipping and billing addresses,</Link> <span>and</span> <Link to={'/'} className='border-b-1 border-menuC'>edit your password and account details.</Link></>}/>  
+                    <Peragrap className={'pt-5 lg:pr-85'} peraText={<><span>From your account dashboard you can view your</span> <Link to={'/'} className='border-b-1 border-menuC'>recent orders,</Link> <span>manage your</span> <Link to={'/'} className='border-b-1 border-menuC'>shipping and billing addresses,</Link> <span>and</span> <Link to={'/'} className='border-b-1 border-menuC'>edit your password and account details.</Link></>}/>  
                     
-                </div> */}
+                </div>
                    
                 {/* Dasbord Part End */}
 
                 {/* Order Part Start  */}
 
-                {/* <div className="w-[70%] border-2 border-categoriC">
+                {/* <div className="overflow-x-scroll lg:overflow-x-auto">
+                    <div className="w-[600px] lg:w-[1051px] border-2 border-categoriC">
                     
-                    <div className=" flex justify-between items-center bg-stone-100 p-5">
-                        <Hadding className={'w-[16%] text-base text-menuC'} text={'ORDER'} as={'h4'}/>
-                        <Hadding className={'w-[20%] text-base text-menuC'} text={'DATE'} as={'h4'}/>
-                        <Hadding className={'w-[16%] text-base text-menuC'} text={'STATUS'} as={'h4'}/>
-                        <Hadding className={'w-[28%] text-base text-menuC'} text={'TOTAL'} as={'h4'}/>
-                        <Hadding className={'w-[18%] text-base text-menuC'} text={'ACTIONS'} as={'h4'}/>
+                    <div className=" flex justify-between items-center bg-stone-100 p-5 lg:pr-20">
+                        <Hadding className={'w-[100px] text-base text-menuC'} text={'ORDER'} as={'h4'}/>
+                        <Hadding className={'w-[100px] text-base text-menuC'} text={'DATE'} as={'h4'}/>
+                        <Hadding className={'w-[100px] text-base text-menuC'} text={'STATUS'} as={'h4'}/>
+                        <Hadding className={'w-[100px] text-base text-menuC'} text={'TOTAL'} as={'h4'}/>
+                        <Hadding className={'w-[100px] text-base text-menuC'} text={'ACTIONS'} as={'h4'}/>
 
                     </div>
-                    <Flex className=" px-5 py-10 border-b-2 border-categoriC">
-                        <Hadding className={'w-[16%] text-base text-menuC'} text={'#2418'} as={'h4'}/>
-                        <Hadding className={'w-[20%] text-base text-menuC'} text={'October 27, 2020	'} as={'h4'}/>
-                        <Hadding className={'w-[16%] text-base text-menuC'} text={'On hold'} as={'h4'}/>
-                        <Hadding className={'w-[28%] text-base text-menuC'} text={'$1,200.65 for 3 items'} as={'h4'}/>
-                        <div className="w-[16%]">
+                    <Flex className="px-5 py-3 lg:py-10 border-b-2 border-categoriC">
+                        <Hadding className={'w-[100px] lg:w-full text-sm lg:text-base text-menuC'} text={'#2418'} as={'h4'}/>
+                        <Hadding className={'w-[100px] lg:w-full text-sm lg:text-base text-menuC'} text={'October 27, 2020	'} as={'h4'}/>
+                        <Hadding className={'w-[100px] lg:w-full text-sm lg:text-base text-menuC'} text={'On hold'} as={'h4'}/>
+                        <Hadding className={'w-[100px] lg:w-full text-sm lg:text-base text-menuC'} text={'$1,200.65 for 3 items'} as={'h4'}/>
+                        <div className="">
                             <SubMitBtn className={'px-10'} submit={'VIEW'}/>
                         </div>
                     </Flex>
-                    <Flex className=" px-5 py-10 border-b-2 border-categoriC">
-                        <Hadding className={'w-[16%] text-base text-menuC'} text={'#2418'} as={'h4'}/>
-                        <Hadding className={'w-[20%] text-base text-menuC'} text={'October 27, 2020	'} as={'h4'}/>
-                        <Hadding className={'w-[16%] text-base text-menuC'} text={'On hold'} as={'h4'}/>
-                        <Hadding className={'w-[28%] text-base text-menuC'} text={'$1,200.65 for 3 items'} as={'h4'}/>
-                        <div className="w-[16%]">
+                    <Flex className=" px-5 py-3 lg:py-10 border-b-2 border-categoriC">
+                        <Hadding className={'w-[100px] lg:w-full text-sm lg:text-base text-menuC'} text={'#2418'} as={'h4'}/>
+                        <Hadding className={'w-[100px] lg:w-full text-sm lg:text-base text-menuC'} text={'October 27, 2020	'} as={'h4'}/>
+                        <Hadding className={'w-[100px] lg:w-full text-sm lg:text-base text-menuC'} text={'On hold'} as={'h4'}/>
+                        <Hadding className={'w-[100px] lg:w-full text-sm lg:text-base text-menuC'} text={'$1,200.65 for 3 items'} as={'h4'}/>
+                        <div className="">
                             <SubMitBtn className={'px-10'} submit={'VIEW'}/>
                         </div>
                     </Flex>
-                    <Flex className=" px-5 py-10 border-b-2 border-categoriC">
-                        <Hadding className={'w-[16%] text-base text-menuC'} text={'#2418'} as={'h4'}/>
-                        <Hadding className={'w-[20%] text-base text-menuC'} text={'October 27, 2020	'} as={'h4'}/>
-                        <Hadding className={'w-[16%] text-base text-menuC'} text={'On hold'} as={'h4'}/>
-                        <Hadding className={'w-[28%] text-base text-menuC'} text={'$1,200.65 for 3 items'} as={'h4'}/>
-                        <div className="w-[16%]">
+                    <Flex className=" px-5 py-3 lg:py-10 border-b-2 border-categoriC">
+                        <Hadding className={'w-[100px] lg:w-full text-sm lg:text-base text-menuC'} text={'#2418'} as={'h4'}/>
+                        <Hadding className={'w-[100px] lg:w-full text-sm lg:text-base text-menuC'} text={'October 27, 2020	'} as={'h4'}/>
+                        <Hadding className={'w-[100px] lg:w-full text-sm lg:text-base text-menuC'} text={'On hold'} as={'h4'}/>
+                        <Hadding className={'w-[100px] lg:w-full text-sm lg:text-base text-menuC'} text={'$1,200.65 for 3 items'} as={'h4'}/>
+                        <div className="">
                             <SubMitBtn className={'px-10'} submit={'VIEW'}/>
                         </div>
                     </Flex>
-                    <Flex className=" px-5 py-10 border-b-2 border-categoriC">
-                        <Hadding className={'w-[16%] text-base text-menuC'} text={'#2418'} as={'h4'}/>
-                        <Hadding className={'w-[20%] text-base text-menuC'} text={'October 27, 2020	'} as={'h4'}/>
-                        <Hadding className={'w-[16%] text-base text-menuC'} text={'On hold'} as={'h4'}/>
-                        <Hadding className={'w-[28%] text-base text-menuC'} text={'$1,200.65 for 3 items'} as={'h4'}/>
-                        <div className="w-[16%]">
+                    <Flex className=" px-5 py-3 lg:py-10">
+                        <Hadding className={'w-[100px] lg:w-full text-sm lg:text-base text-menuC'} text={'#2418'} as={'h4'}/>
+                        <Hadding className={'w-[100px] lg:w-full text-sm lg:text-base text-menuC'} text={'October 27, 2020	'} as={'h4'}/>
+                        <Hadding className={'w-[100px] lg:w-full text-sm lg:text-base text-menuC'} text={'On hold'} as={'h4'}/>
+                        <Hadding className={'w-[100px] lg:w-full text-sm lg:text-base text-menuC'} text={'$1,200.65 for 3 items'} as={'h4'}/>
+                        <div className="">
                             <SubMitBtn className={'px-10'} submit={'VIEW'}/>
                         </div>
                     </Flex>
+                </div>
                 </div> */}
                 {/* Order Part End */}
 
                 {/* Address Part Start  */}
 
-                {/* <div className="w-[70%]">
+                {/* <div className="lg:w-[70%] pl-4 lg:pl-0">
                     <Peragrap peraText={"The following addresses will be used on the checkout page by default."}/>
-                    <div className="flex justify-between pt-15">
+                    <div className="flex flex-col md:flex-row justify-between gap-y-5 pt-15">
                         <div className="">
                             <Hadding className={'text-lg text-menuC font-medium'} text={'BILLING ADDRESS'} as={'h3'}/>
                             <Peragrap className={'leading-7 pt-5'} peraText={'Daniel Robinson'}/>
@@ -111,7 +113,7 @@ const MyAcount = () => {
                             <Peragrap peraText={'+1 246-345-0695'}/>
                         </div>
                         <div className="">
-                            <Hadding className={'text-sm text-menuC font-medium border-b-2 border-menuC'} text={'EDIT'} as={'h3'}/>
+                            <Hadding className={'w-[30px] text-sm text-menuC font-medium border-b-2 border-menuC'} text={'EDIT'} as={'h3'}/>
                         </div>
                         <div className="">
                             <Hadding className={'text-lg text-menuC font-medium'} text={'BILLING ADDRESS'} as={'h3'}/>
@@ -122,25 +124,25 @@ const MyAcount = () => {
                             <Peragrap peraText={'+1 246-345-0695'}/>
                         </div>
                         <div className="">
-                            <Hadding className={'text-sm text-menuC font-medium border-b-2 border-menuC'} text={'EDIT'} as={'h3'}/>
+                            <Hadding className={'w-[30px] text-sm text-menuC font-medium border-b-2 border-menuC'} text={'EDIT'} as={'h3'}/>
                         </div>
                     </div>
                 </div> */}
                 {/* Address Part End */}
 
                 {/* Acount Details Part Start  */}
-                {/* <div className="w-[70%]">
+                {/* <div className="lg:w-[70%] px-3 lg:px-0">
                     <form>
                         <div className="flex justify-between">
-                            <input className='w-[48%] text-base text-menuC p-5 border-2 border-categoriC placeholder:text-base placeholder:text-deleteC' type="text" placeholder='First Name' />
-                            <input className='w-[48%] text-base text-menuC p-5 border-2 border-categoriC placeholder:text-base placeholder:text-deleteC' type="text" placeholder='Last Name' />
+                            <input className='w-[48%] text-base text-menuC p-2 lg:p-5 border-2 border-categoriC placeholder:text-sm placeholder:text-deleteC' type="text" placeholder='First Name' />
+                            <input className='w-[48%] text-base text-menuC p-2 lg:p-5 border-2 border-categoriC placeholder:text-sm placeholder:text-deleteC' type="text" placeholder='Last Name' />
                         </div>
-                            <input className='w-full text-base text-menuC p-5 border-2 border-categoriC placeholder:text-base placeholder:text-deleteC mt-5' type="text" placeholder='Display Name' />
-                            <input className='w-full text-base text-menuC p-5 border-2 border-categoriC placeholder:text-base placeholder:text-deleteC mt-5' type="text" placeholder='Email Address' />
+                            <input className='w-full text-base text-menuC p-2 lg:p-5 border-2 border-categoriC placeholder:text-sm placeholder:text-deleteC mt-3 lg:mt-5' type="text" placeholder='Display Name' />
+                            <input className='w-full text-base text-menuC p-2 lg:p-5 border-2 border-categoriC placeholder:text-sm placeholder:text-deleteC mt-3 lg:mt-5' type="text" placeholder='Email Address' />
                             <div className="pt-5"><label className='text-base text-menuC font-medium' htmlFor="#">PASSWORD CHANGE</label></div>
-                            <input className='w-full text-base text-menuC p-5 border-2 border-categoriC placeholder:text-base placeholder:text-deleteC mt-5' type="text" placeholder='Current password (leave blank to leave unchanged) ' />
-                            <input className='w-full text-base text-menuC p-5 border-2 border-categoriC placeholder:text-base placeholder:text-deleteC mt-5' type="text" placeholder='New password (leave blank to leave unchanged) ' />
-                            <input className='w-full text-base text-menuC p-5 border-2 border-categoriC placeholder:text-base placeholder:text-deleteC mt-5' type="text" placeholder='New password (Confirm new password ) ' />
+                            <input className='w-full text-base text-menuC p-2 lg:p-5 border-2 border-categoriC placeholder:text-sm placeholder:text-deleteC mt-3 lg:mt-5' type="text" placeholder='Current password (leave blank to leave unchanged) ' />
+                            <input className='w-full text-base text-menuC p-2 lg:p-5 border-2 border-categoriC placeholder:text-sm placeholder:text-deleteC mt-3 lg:mt-5' type="text" placeholder='New password (leave blank to leave unchanged) ' />
+                            <input className='w-full text-base text-menuC p-2 lg:p-5 border-2 border-categoriC placeholder:text-sm placeholder:text-deleteC mt-3 lg:mt-5' type="text" placeholder='New password (Confirm new password ) ' />
                             <SubMitBtn className={'px-13 mt-8'} submit={'SAVE CHANGES'}/>
                     </form>
                 </div> */}
@@ -148,19 +150,19 @@ const MyAcount = () => {
 
                 {/* Wishlist Part Start  */}
 
-                <div className="w-[70%]">
-                    <Flex>
-                        <div className="w-[32%]">
+                {/* <div className="lg:w-[70%] px-2 lg:px-0">
+                    <Flex className={'flex-wrap gap-y-5'}>
+                        <div className="w-[48%] lg:w-[32%]">
                             <Product productSrc={jacket} productTitle={'Colorful Jacket'} productPrice={'$29'} imgClear={<><MdOutlineClear/></>}/>
                         </div>
-                        <div className="w-[32%]">
+                        <div className="w-[48%] lg:w-[32%]">
                             <Product productSrc={kriby} productTitle={'Shirt In Botanical Cheetah Print'} productPrice={'$29'} imgClear={<><MdOutlineClear/></>}/>
                         </div>
-                        <div className="w-[32%]">
+                        <div className="w-[48%] lg:w-[32%]">
                             <Product productSrc={clabkiit} productTitle={'Cotton Jersey T-Shirt'} productPrice={'$29'} imgClear={<><MdOutlineClear/></>}/>
                         </div>
                     </Flex>
-                </div>
+                </div> */}
                 {/* Wishlist Part End */}
             </div>
         </Container>

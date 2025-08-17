@@ -93,6 +93,7 @@ const Header = () => {
                             </ul>
                             <div className="flex items-center gap-x-3">
                               <Link to={'/'}><User/></Link>
+                              <Link to={'/myAcount'}><Heart/></Link>
                             </div>
                      </div>}
         </div>
