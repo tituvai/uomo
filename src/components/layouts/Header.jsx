@@ -17,9 +17,10 @@ const Header = () => {
     <>
         <div className="py-9">
             <Container>
-                <Flex>
+              <div className="hidden lg:block">
+                  <Flex>
                     <div className=" text-menuC flex items-center gap-x-20">
-                        <Image imgSrc={logo} imgAlt={logo}/>
+                        <Link to={'/'}><Image imgSrc={logo} imgAlt={'logo.png'}/></Link>
 
                          <ul className='flex items-center gap-x-10'>
                                   {
@@ -44,6 +45,24 @@ const Header = () => {
                         <Link to={'/'}><Bars/></Link>   
                     </div>
                 </Flex>
+              </div>
+
+                {/* Mobile Phone Device Part Start  */}
+
+              <div className="lg:hidden px-5">
+                  <Flex>
+                  <div className="">
+                    <span><Bars/></span>
+                  </div>
+                  <div className="">
+                    <Link to={'/'}><Image imgSrc={logo} imgAlt={'logo.png'}/></Link>                 
+                  </div>
+                  <div className="">
+                    <Link to={'/card'}><Bage/></Link>
+                  </div>
+                </Flex>
+              </div>
+                {/* Mobile Phone Device Part End */}
             </Container>
         </div>
     </>

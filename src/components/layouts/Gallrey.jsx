@@ -114,7 +114,7 @@ const Gallrey = () => {
                     </div>
                     
                 </Flex>
-                <Flex>
+                <Flex className={'flex-col md:flex-row gap-y-10'}>
                     <div className="text-center">
                         <Vector className={'m-auto mb-5'}/>
                         <Hadding className={'text-lg text-black font-medium uppercase py-1'} text={'FAST AND FREE DELIVERY'} as={'h4'}/>

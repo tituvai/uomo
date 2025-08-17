@@ -11,9 +11,9 @@ import visa from '/src/assets/visa.png'
 
 const Footer = () => {
   return (
-    <div className="pt-23 pb-6 bg-footerBg">
+    <div className="pt-23 pb-6 bg-footerBg px-5 lg:px-0">
       <Container>
-        <div className={'flex justify-between border-b-2 border-borderC pb-23'}>
+        <div className={'lg:flex justify-between border-b-2 border-borderC pb-23'}>
             <div className="w-[282px]">
               <Image imgSrc={footerLogo} imgAlt={footerLogo}/>
               <Peragrap className={'py-9'} peraText={'1418 River Drive, Suite 35 Cottonhall, CA 9622 United States'}/>
@@ -27,7 +27,7 @@ const Footer = () => {
               </div> 
             </div>
             <div className="">
-              <Hadding className={'text-lg text-menuC font-medium pb-9'} text={'COMPANY'} as={'h3'} />
+              <Hadding className={'text-lg text-menuC font-medium py-5 lg:pb-9'} text={'COMPANY'} as={'h3'} />
               <ul>
                 <Link to={'/'}><li className='text-ms text-menuC  leading-9 group relative'><div className=" w-0 group-hover:w-[30px] h-[2px] bg-menuC transition-all duration-500 absolute bottom-0 left-0"></div>About Us</li></Link>
                 <Link to={'/'}><li className='text-ms text-menuC  leading-9 group relative'><div className=" w-0 group-hover:w-[30px] h-[2px] bg-menuC transition-all duration-500 absolute bottom-0 left-0"></div>Careers</li></Link>
@@ -37,7 +37,7 @@ const Footer = () => {
             </ul>
             </div>
             <div className="">
-              <Hadding className={'text-lg text-menuC font-medium pb-9'} text={'SHOP'} as={'h3'} />
+              <Hadding className={'text-lg text-menuC font-medium py-5 lg:pb-9'} text={'SHOP'} as={'h3'} />
                <ul>
                 <Link to={'/'}><li className='text-ms text-menuC  leading-9 group relative'><div className=" w-0 group-hover:w-[30px] h-[2px] bg-menuC transition-all duration-500 absolute bottom-0 left-0"></div>New Arrivals</li></Link>
                 <Link to={'/'}><li className='text-ms text-menuC  leading-9 group relative'><div className=" w-0 group-hover:w-[30px] h-[2px] bg-menuC transition-all duration-500 absolute bottom-0 left-0"></div>Accessories</li></Link>
@@ -47,7 +47,7 @@ const Footer = () => {
             </ul>
             </div>
             <div className="">
-              <Hadding className={'text-lg text-menuC font-medium pb-9'} text={'HELP'} as={'h3'} />
+              <Hadding className={'text-lg text-menuC font-medium py-5 lg:pb-9'} text={'HELP'} as={'h3'} />
                <ul>
                 <Link to={'/'}><li className='text-ms text-menuC  leading-9 group relative'><div className=" w-0 group-hover:w-[30px] h-[2px] bg-menuC transition-all duration-500 absolute bottom-0 left-0"></div>Customer Service</li></Link>
                 <Link to={'/'}><li className='text-ms text-menuC  leading-9 group relative'><div className=" w-0 group-hover:w-[30px] h-[2px] bg-menuC transition-all duration-500 absolute bottom-0 left-0"></div>My Account</li></Link>
@@ -57,15 +57,15 @@ const Footer = () => {
                 <Link to={'/'}><li className='text-ms text-menuC  leading-9 group relative'><div className=" w-0 group-hover:w-[30px] h-[2px] bg-menuC transition-all duration-500 absolute bottom-0 left-0"></div>Gift Card</li></Link>                                               
             </ul>
             </div>
-            <div className="w-[330px]">
-              <Hadding className={'text-lg text-menuC font-medium pb-9'} text={'SUBSCRIBE'} as={'h3'} />
+            <div className="lg:w-[330px]">
+              <Hadding className={'text-lg text-menuC font-medium py-5 lg:pb-9'} text={'SUBSCRIBE'} as={'h3'} />
               <Peragrap peraText={'Be the first to get the latest news about trends, promotions, and much more!'}/>
               <div className="relative py-5">
-                <input className='w-[330px] p-4 h-[50px] bg-white outline-0 placeholder:text-sm placeholder:text-menuC' type="text" placeholder='Your email address' />
+                <input className='w-full lg:w-[330px] p-4 h-[50px] bg-white outline-0 placeholder:text-sm placeholder:text-menuC' type="text" placeholder='Your email address' />
                 <button className='text-sm text-menuC font-medium cursor-pointer absolute right-5 top-1/2 -translate-y-1/2'>JOIN</button>
               </div>
               <Hadding className={'text-[15px] text-menuC font-medium py-4'} text={'Secure payments'} as={'h3'} />
-              <Image imgSrc={visa} imgAlt={visa}/>
+              <Image imgSrc={visa} imgAlt={'visa.png'}/>
             </div>
         </div>
 
@@ -73,7 +73,7 @@ const Footer = () => {
         <div className="">
           <Peragrap peraText={'©2025 Uomo'}/> 
         </div>
-        <div className="flex gap-6">
+        <div className="lg:flex gap-6">
           <Peragrap peraText={'Language'}/> 
           <Hadding className={'text-sm text-menuC'} text={'United Kingdom  |  English'} as={'h5'}/>
           <Peragrap peraText={'Currency'}/> 

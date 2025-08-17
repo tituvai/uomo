@@ -11,9 +11,9 @@ const Product = ({productSrc, productAlt, productPrice, productDelete, productTi
   return (
     <>
         <div className="relative group">
-            <div className="w-full h-[300px] relative group">
-              <Image className={'w-full h-[300px]'} imgSrc={productSrc} imgAlt={productAlt}/>
-              <Image className={'w-full h-[300px] absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-all duration-300'} imgSrc={opacitySrc} imgAlt={opacityAlt}/>
+            <div className="w-full h-[400px] relative group">
+              <Image className={'w-full h-[400px]'} imgSrc={productSrc} imgAlt={productAlt}/>
+              <Image className={'w-full h-[400px] absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-all duration-300'} imgSrc={opacitySrc} imgAlt={opacityAlt}/>
             </div>
             <Flex className={'py-3'}>
                 <Hadding className={'text-sm text-deleteC'} text={'Dresses'} as={'h6'}/>

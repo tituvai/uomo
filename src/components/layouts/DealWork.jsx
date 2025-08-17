@@ -40,12 +40,12 @@ const DealWork = () => {
 
   return (
     <>
-        <div className="pt-50 bg-[url(/src/assets/dealBg.png)] bg-no-repeat bg-center bg-cover" >
+        <div className="p-5 lg:pt-50 bg-[url(/src/assets/dealBg.png)] bg-no-repeat bg-center bg-cover">
             <Container>
                 <div className="relative">
                     <Hadding className={'pl-11 text-sm text-threeC font-medium'} text={'DEAL OF THE WEEK'} as={'h5'}/>
                 <div className="w-[40px] h-[2px] bg-threeC absolute left-0 top-2.5"></div>
-                    <Hadding className={'py-5 text-7xl text-menuC font-mixed'} text={<><span className='font-extrabold'>Spring</span><span>Collection</span></>} as={'h3'}/>
+                    <Hadding className={'py-5 text-3xl lg:text-7xl text-menuC font-mixed'} text={<><span className='font-extrabold'>Spring</span><span>Collection</span></>} as={'h3'}/>
                     <Button btnText={'SHOP NOW'}/>
                 </div>
                 <div className="flex items-center gap-x-10 py-12">

@@ -31,8 +31,8 @@ const TrendProduct = () => {
             <div className="text-center">
                 <Hadding className={'text-[35px] text-menuC font-mixed'} text={<><span>Our Trendy</span><span className='font-bold'>Products</span></>} as={'h3'}/>
             </div>
-            <div className="w-[627px] m-auto py-8">
-                <ul className='flex gap-x-10 justify-center'>
+            <div className="lg:w-[627px] m-auto py-8">
+                <ul className='flex gap-x-10 gap-y-5 justify-center flex-wrap'>
                     <Link to={'/'}><li className='text-base text-deleteC font-medium hover:text-menuC relative group'><div className="w-0 h-[2px] bg-menuC absolute bottom-0 left-0 group-hover:w-full transition-all duration-300"></div> ALL</li></Link>
                     <Link to={'/'}><li className='text-base text-deleteC font-medium hover:text-menuC relative group'><div className="w-0 h-[2px] bg-menuC absolute bottom-0 left-0 group-hover:w-full transition-all duration-300"></div> NEWARRIVALS</li></Link>
                     <Link to={'/'}><li className='text-base text-deleteC font-medium hover:text-menuC relative group'><div className="w-0 h-[2px] bg-menuC absolute bottom-0 left-0 group-hover:w-full transition-all duration-300"></div> BEST SELLER</li></Link>
