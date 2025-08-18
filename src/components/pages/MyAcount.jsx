@@ -38,17 +38,17 @@ const MyAcount = () => {
 
                 {/* Dasbord Part Start  */}
 
-                <div className="lg:w-[70%] px-3 lg:px-0">
+                {/* <div className="lg:w-[70%] px-3 lg:px-0">
                     <Hadding className={'text-base text-menuC font-normal'} text={<><span>Hello</span> <span className='font-medium'>alitfn58</span> <span>(not</span> <span className='font-medium'>alitfn58?</span> <Link to={'/'}>Log out</Link> <span>)</span></>} as={'h4'}/>
                     <Peragrap className={'pt-5 lg:pr-85'} peraText={<><span>From your account dashboard you can view your</span> <Link to={'/'} className='border-b-1 border-menuC'>recent orders,</Link> <span>manage your</span> <Link to={'/'} className='border-b-1 border-menuC'>shipping and billing addresses,</Link> <span>and</span> <Link to={'/'} className='border-b-1 border-menuC'>edit your password and account details.</Link></>}/>  
                     
-                </div>
+                </div> */}
                    
                 {/* Dasbord Part End */}
 
                 {/* Order Part Start  */}
 
-                {/* <div className="overflow-x-scroll lg:overflow-x-auto">
+                <div className="overflow-x-scroll lg:overflow-x-auto">
                     <div className="w-[600px] lg:w-[1051px] border-2 border-categoriC">
                     
                     <div className=" flex justify-between items-center bg-stone-100 p-5 lg:pr-20">
@@ -96,7 +96,7 @@ const MyAcount = () => {
                         </div>
                     </Flex>
                 </div>
-                </div> */}
+                </div>
                 {/* Order Part End */}
 
                 {/* Address Part Start  */}

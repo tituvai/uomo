@@ -16,24 +16,25 @@ const Card = () => {
     <>
     <div className="">
         <Container>
-            <Hadding className={'text-[35px] text-menuC font-bold py-10'} text={'CART'} as={'h3'}/>
+            <Hadding className={'text-[35px] text-center lg:text-left text-menuC font-bold py-10'} text={'CART'} as={'h3'}/>
 
-            <div className=" pb-20">
+            <div className=" lg:pb-20 pb-10 text-center lg:text-left">
             <Hadding className={'text-lg text-menuC font-medium'} text={'SHOPPING BAG'} as={'h6'}/>
             <Peragrap className={'text-deleteC'} peraText={'Manage Your Items List'}/>
             </div>
 
             {/* Add To cart Part ##################################### */}
-            <div className="flex justify-between pb-30">
-                <div className="w-[65%]">
-                <Flex className={'pb-3  border-b-2 border-categoriC'}>
-                    <Hadding className={'w-[50%] text-base text-menuC font-medium leading-6'} text={'PRODUCT'} as={'h4'}/>
-                    <Hadding className={'w-[12%] text-base text-menuC font-medium leading-6'} text={'PRICE'} as={'h4'}/>
+            <div className="lg:flex justify-between pb-30">
+             <div className="w-[600px] lg:w-[65%]">
+                <div className="overflow-x-scroll lg:overflow-x-auto">
+                 <Flex className={'pb-3  border-b-2 border-categoriC'}>
+                    <Hadding className={'w-[46%] lg:w-[50%] text-base text-menuC font-medium leading-6'} text={'PRODUCT'} as={'h4'}/>
+                    <Hadding className={'w-[18%] lg:w-[12%] text-base text-menuC font-medium leading-6'} text={'PRICE'} as={'h4'}/>
                     <Hadding className={'w-[20%] text-base text-menuC font-medium leading-6'} text={'QUANTITY'} as={'h4'}/>
                     <Hadding className={'w-[18%] text-base text-menuC font-medium leading-6'} text={'SUBTOTAL'} as={'h4'}/>
                 </Flex>
                 <Flex className={'border-b-2 border-categoriC py-5'}>
-                    <div className="w-[50%] flex items-center gap-x-4">
+                    <div className="lg:w-[50%] flex items-center gap-x-4">
                         <Image imgSrc={cart} imgAlt={'cart.png'}/>
                         <div className="">
                         <Hadding className={'text-base text-menuC font-medium'} text={'Zessi Dresses'} as={'h6'}/>
@@ -41,25 +42,25 @@ const Card = () => {
                         <Hadding className={'text-base text-deleteC'} text={'xl'} as={'h6'}/>
                         </div>
                     </div>
-                    <div className="w-[12%]">
+                    <div className="lg:w-[12%]">
                         <Hadding className={'text-base text-deleteC font-medium'} text={'$99'} as={'h5'}/>
                     </div>
-                    <div className="w-[20%]">
-                        <div className="w-[120px] p-3 border-2 border-categoriC flex items-center justify-between">
+                    <div className="lg:w-[20%]">
+                        <div className="lg:w-[120px] w-[80px] p-1 lg:p-3 border-2 border-categoriC flex items-center justify-between">
                             <span className='text-2xl text-deleteC font-medium'>-</span>
                             <span className='text-base text-deleteC font-medium'>3</span>
                             <span className='text-base text-deleteC font-medium'>+</span>
                         </div>
                     </div>
-                    <div className="w-[13%]">
+                    <div className="lg:w-[13%]">
                         <Hadding className={'text-base text-menuC font-medium'} text={'$399'} as={'h4'}/>
                     </div>
-                    <div className="w-[3%]">
+                    <div className="lg:w-[3%]">
                        <MdOutlineClear className='text-lg text-deleteC'/> 
                     </div>
                 </Flex>
                 <Flex className={'border-b-2 border-categoriC py-5'}>
-                    <div className="w-[50%] flex items-center gap-x-4">
+                    <div className="lg:w-[50%] flex items-center gap-x-4">
                         <Image imgSrc={cartOne} imgAlt={'cart1.png'}/>
                         <div className="">
                         <Hadding className={'text-base text-menuC font-medium'} text={'Kirby T-Shirt'} as={'h6'}/>
@@ -67,25 +68,25 @@ const Card = () => {
                         <Hadding className={'text-base text-deleteC'} text={'m'} as={'h6'}/>
                         </div>
                     </div>
-                    <div className="w-[12%]">
+                    <div className="lg:w-[12%]">
                         <Hadding className={'text-base text-deleteC font-medium'} text={'$79'} as={'h5'}/>
                     </div>
-                    <div className="w-[20%]">
-                        <div className="w-[120px] p-3 border-2 border-categoriC flex items-center justify-between">
+                    <div className="lg:w-[20%]">
+                        <div className="lg:w-[120px] w-[80px] p-1 lg:p-3 border-2 border-categoriC flex items-center justify-between">
                             <span className='text-2xl text-deleteC font-medium'>-</span>
                             <span className='text-base text-deleteC font-medium'>4</span>
                             <span className='text-base text-deleteC font-medium'>+</span>
                         </div>
                     </div>
-                    <div className="w-[13%]">
+                    <div className="lg:w-[13%]">
                         <Hadding className={'text-base text-menuC font-medium'} text={'$279'} as={'h4'}/>
                     </div>
-                    <div className="w-[3%]">
+                    <div className="lg:w-[3%]">
                        <MdOutlineClear className='text-lg text-deleteC'/> 
                     </div>
                 </Flex>
                 <Flex className={'border-b-2 border-categoriC py-5'}>
-                    <div className="w-[50%] flex items-center gap-x-4">
+                    <div className="lg:w-[50%] flex items-center gap-x-4">
                         <Image imgSrc={cartTwo} imgAlt={'cart2.png'}/>
                         <div className="">
                         <Hadding className={'text-base text-menuC font-medium'} text={'Cableknit Shawl'} as={'h6'}/>
@@ -93,20 +94,20 @@ const Card = () => {
                         <Hadding className={'text-base text-deleteC'} text={'xxl'} as={'h6'}/>
                         </div>
                     </div>
-                    <div className="w-[12%]">
+                    <div className="lg:w-[12%]">
                         <Hadding className={'text-base text-deleteC font-medium'} text={'$87'} as={'h5'}/>
                     </div>
-                    <div className="w-[20%]">
-                        <div className="w-[120px] p-3 border-2 border-categoriC flex items-center justify-between">
+                    <div className="lg:w-[20%]">
+                        <div className="lg:w-[120px] w-[80px] p-1 lg:p-3 border-2 border-categoriC flex items-center justify-between">
                             <span className='text-2xl text-deleteC font-medium'>-</span>
                             <span className='text-base text-deleteC font-medium'>3</span>
                             <span className='text-base text-deleteC font-medium'>+</span>
                         </div>
                     </div>
-                    <div className="w-[13%]">
+                    <div className="lg:w-[13%]">
                         <Hadding className={'text-base text-menuC font-medium'} text={'$268'} as={'h4'}/>
                     </div>
-                    <div className="w-[3%]">
+                    <div className="lg:w-[3%]">
                        <MdOutlineClear className='text-lg text-deleteC'/> 
                     </div>
                 </Flex>
@@ -119,10 +120,12 @@ const Card = () => {
                         <button className='text-base text-menuC px-7 py-4 bg-footerBg cursor-pointer'>UPDATE CART</button>
                     </div>
                 </Flex>
+                </div>
             </div>
+           
 
             {/* Cart Part totals****************************************** */}
-            <div className="w-[30%] ">
+            <div className="lg:w-[30%] ">
             <div className="p-7 border-2 border-menuC">
                     <Hadding className={'text-lg text-menuC font-medium'} text={'CART TOTALS'} as={'h3'}/>
                 <div className="flex items-center justify-between border-b-2 border-categoriC pb-3">
