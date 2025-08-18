@@ -10,12 +10,12 @@ import { Link } from 'react-router-dom'
 const Checkout = () => {
   return (
     <>
-    <div className="">
+    <div className="px-3 lg:px-0">
         <Container>
-            <Hadding className={'text-menuC text-[35px] font-bold py-10'} text={'SHIPPING AND CHECKOUT'} as={'h3'}/>
+            <Hadding className={'text-menuC text-xl text-center lg:text-left lg:text-[35px] font-bold py-10'} text={'SHIPPING AND CHECKOUT'} as={'h3'}/>
 
-            <div className="flex justify-between pb-40">
-                <div className="w-[65%]">
+            <div className="lg:flex justify-between pb-40">
+                <div className="lg:w-[65%]">
                     <Hadding className={'text-base text-menuC font-medium py-5'} text={'BILLING DETAILS'} as={'h4'}/>
 
                     <form>
@@ -36,7 +36,7 @@ const Checkout = () => {
                         <textarea className='h-[200px] w-full p-5 border-2 border-categoriC outline-0' placeholder='Order Notes (optional)'></textarea>
                     </form>
                 </div>
-                <div className="w-[30%]">
+                <div className="lg:w-[30%]">
                     <div className="p-8 border-2 border-menuC">
                             <Hadding className={'text-lg text-menuC font-medium pb-8'} text={'YOUR ORDER'} as={'h4'}/>
                         <Flex className="pt-5 pb-2 border-b-2 border-categoriC">

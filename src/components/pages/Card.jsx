@@ -111,8 +111,8 @@ const Card = () => {
                        <MdOutlineClear className='text-lg text-deleteC'/> 
                     </div>
                 </Flex>
-                <Flex className={'py-10'}>
-                    <div className="w-[400px] relative border border-categoriC">
+                <Flex className={'py-10 px-3 lg:px-0'}>
+                    <div className="w-[300px]  lg:w-[400px] relative border border-categoriC">
                         <input className=' p-4 placeholder:text-base placeholder:text-deleteC outline-0 ' type="text" placeholder='Coupon Code' />
                         <span className='text-base text-menuC font-medium absolute right-5 top-1/2 -translate-y-1/2 cursor-pointer'>APPLY COUPON</span>
                     </div>
