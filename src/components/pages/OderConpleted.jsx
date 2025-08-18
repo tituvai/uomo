@@ -10,26 +10,28 @@ const OderConpleted = () => {
     <>
     <div className="pb-40">
         <Container>
-            <Hadding className={'text-[35px] text-menuC font-bold py-10'} text={'Order received'} as={'h3'}/>
+           <div className="text-2xl text-center lg:text-left pb-5">
+             <Hadding className={'text-[35px] text-menuC font-bold py-10'} text={'Order received'} as={'h3'}/>
             <Hadding className={'text-lg text-menuC font-medium'} text={'CONFIRMATION'} as={'h3'}/>
             <Peragrap className={'text-deleteC'} peraText={'Review And Submit Your Order'}/>
+           </div>
             <div className="w-[70px] h-[70px] rounded-full bg-[#B9A16B] m-auto flex justify-center items-center"><ImCheckmark className='text-white text-3xl'/></div>
             <div className="text-center py-8">
-                <Hadding className={'text-[35px] text-menuC'} text={'Your order is completed!'} as={'h4'}/>
+                <Hadding className={'text-2xl lg:text-[35px] text-menuC'} text={'Your order is completed!'} as={'h4'}/>
                 <Peragrap className={'text-deleteC'} peraText={'Thank you. Your order has been received.'}/>
             </div>
-            <div className="w-[900px] m-auto">
+            <div className="lg:w-[900px] m-auto">
                 <div className="w-full border-2 border-dashed border-gray-400 p-8">
-                    <div className="flex items-center gap-x-20">
-                        <div className="">
+                    <div className="lg:flex items-center lg:gap-x-20">
+                        <div className="pb-3 lg:pb-0">
                             <Hadding className={'text-base text-deleteC font-medium'} text={'Order Number'} as={'h5'}/>
                             <Hadding className={'text-lg text-menuC font-medium'} text={'13119'} as={'h5'}/>
                         </div>
-                        <div className="">
+                        <div className="pb-3 lg:pb-0">
                             <Hadding className={'text-base text-deleteC font-medium'} text={'Date'} as={'h5'}/>
                             <Hadding className={'text-lg text-menuC font-medium'} text={'27/11/2020'} as={'h5'}/>
                         </div>
-                        <div className="">
+                        <div className="pb-3 lg:pb-0">
                             <Hadding className={'text-base text-deleteC font-medium'} text={'Total'} as={'h5'}/>
                             <Hadding className={'text-lg text-menuC font-medium'} text={'$40.10'} as={'h5'}/>
                         </div>

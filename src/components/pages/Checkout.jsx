@@ -12,7 +12,7 @@ const Checkout = () => {
     <>
     <div className="px-3 lg:px-0">
         <Container>
-            <Hadding className={'text-menuC text-xl text-center lg:text-left lg:text-[35px] font-bold py-10'} text={'SHIPPING AND CHECKOUT'} as={'h3'}/>
+            <Hadding className={'text-menuC text-2xl text-center lg:text-left lg:text-[35px] font-bold py-10'} text={'SHIPPING AND CHECKOUT'} as={'h3'}/>
 
             <div className="lg:flex justify-between pb-40">
                 <div className="lg:w-[65%]">

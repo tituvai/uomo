@@ -60,7 +60,37 @@ const ShopDetiles = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
      nextArrow:<NextArrow/>,
-    prevArrow:<PrevArrow/>
+    prevArrow:<PrevArrow/>,
+        responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+          nextArrow: null,
+          prevArrow: null
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          nextArrow: null,
+          prevArrow: null
+        }
+      }
+    ]
   };
 
   // Active Class 
@@ -69,11 +99,11 @@ const ShopDetiles = () => {
   
   return (
     <>
-    <div className="">
+    <div className="px-3 lg:px-0">
         <Container>
-            <div className="flex justify-between">
-                <div className="w-[50%]">
-                    <div className="slider-container w-full pl-30">
+            <div className="lg:flex justify-between">
+                <div className="lg:w-[50%] pb-10 lg:pb-0">
+                    <div className="slider-container w-full lg:pl-30">
                     <Slider {...settings}>
                         {images.map((img, index) => (
                         <div key={index}><img src={img} alt={`slide-${index}`}/></div>
@@ -81,7 +111,7 @@ const ShopDetiles = () => {
                     </Slider>
                     </div>
                 </div>
-                <div className="w-[46%]">
+                <div className="lg:w-[46%]">
                     <div className="">
                         <span className="text-base text-menuC font-medium uppercase">Home</span>
                         <span>/</span>
@@ -90,7 +120,7 @@ const ShopDetiles = () => {
                     <Hadding className={'text-[26px] text-menuC pt-5'} text={'Lightweight Puffer Jacket With a Hood'} as={'h4'}/>
                     <Hadding className={'text-[22px] text-menuC font-medium pb-5'} text={'$249'} as={'h4'}/>
                     <Peragrap className={'leading-6'} peraText={'Phasellus sed volutpat orci. Fusce eget lore mauris vehicula elementum gravida nec dui. Aenean aliquam varius ipsum, non ultricies tellus sodales eu. Donec dignissim viverra nunc, ut aliquet magna posuere eget.'}/>
-                    <div className="flex items-center gap-x-5 pt-8">
+                    <div className="flex flex-wrap gap-y-5 items-center gap-x-5 pt-8">
                         <Hadding className={'text-base text-menuC font-medium pr-10'} text={'SIZES'} as={'h6'}/>
                         <span className="text-base text-menuC w-[40px] h-[40px] flex items-center justify-center border-2 border-categoriC">xs</span>
                         <span className="text-base text-menuC w-[40px] h-[40px] flex items-center justify-center border-2 border-categoriC">s</span>
@@ -105,13 +135,13 @@ const ShopDetiles = () => {
                         <span className=" w-[25px] h-[25px] bg-[#C93A3E] rounded-full"></span>
                         <span className=" w-[25px] h-[25px] bg-[#E4E4E4] rounded-full"></span>
                     </div>
-                    <div className="flex items-center gap-x-10 pt-8">
+                    <div className="lg:flex items-center gap-x-10 pt-8">
                         <div className="w-[100px] p-2 border-2 border-categoriC flex justify-between items-center">
                             <span className="text-base text-deleteC font-medium">+</span>
                             <span className="text-base text-deleteC font-medium">3</span>
                             <span className="text-2xl text-deleteC font-medium">-</span>
                         </div>
-                        <SubMitBtn className={'px-18'} submit={'ADD TO CART'}/>
+                        <SubMitBtn className={'px-18 mt-3 lg:mt-0'} submit={'ADD TO CART'}/>
                     </div>
                     <div className="flex items-center gap-x-10 pt-7">
                       <Button className={'flex items-center gap-x-2'} btnText={<><CiHeart className="text-xl"/><span>ADD TO WISHLIST</span></>}/>
@@ -123,16 +153,16 @@ const ShopDetiles = () => {
                 </div>
             </div>
 
-            <div className="flex items-center justify-center gap-x-20 pt-20">
+            <div className="flex lg:items-center justify-center gap-x-5 lg:gap-x-20 pt-20">
               <Hadding className={'text-base text-menuC font-medium relative group'} text={<><span className="w-0 h-[2px] bg-menuC group-hover:w-full absolute left-0-0 bottom-0  transition-all duration-500"></span><span>DESCRIPTION</span></>} as={'h4'}/>
               <Hadding className={'text-base text-menuC font-medium relative group'} text={<><span className="w-0 h-[2px] bg-menuC group-hover:w-full absolute left-0-0 bottom-0  transition-all duration-500"></span><span>ADDITIONAL INFORMATION</span></>} as={'h4'}/>
               <Hadding className={'text-base text-menuC font-medium relative group'} text={<><span className="w-0 h-[2px] bg-menuC group-hover:w-full absolute left-0-0 bottom-0  transition-all duration-500"></span><span>REVIEWS (3)</span></>} as={'h4'}/>                                
             </div>
 
-            <div className="w-[940px] m-auto pt-15">
+            <div className="lg:w-[940px] m-auto pt-15">
               <Hadding className={'text-base text-menuC font-medium pb-5'} text={'Sed do eiusmod tempor incididunt ut labore'} as={'h6'}/>
               <Peragrap peraText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'}/>
-              <div className="flex items-center justify-between pt-15">
+              <div className="lg:flex items-center justify-between pt-15">
                 <div className="">
                   <Hadding className={'text-base text-menuC font-medium pb-5'} text={'Why choose product?'} as={'h6'}/>
                   <Peragrap className={'flex items-center gap-x-2 leading-7.5'} peraText={<><div className="w-[10px] h-[10px] bg-categoriC rounded-full"></div><span>Creat by cotton fibric with soft and smooth</span></>}/>        
@@ -140,7 +170,7 @@ const ShopDetiles = () => {
                   <Peragrap className={'flex items-center gap-x-2 leading-7.5'} peraText={<><div className="w-[10px] h-[10px] bg-categoriC rounded-full"></div><span>Downloadable/Digital Products, Virtual Products</span></>}/>        
                 </div>
                 <div className="">
-                  <Hadding className={'text-base text-menuC font-medium pb-5'} text={'Sample Number List'} as={'h6'}/>
+                  <Hadding className={'text-base text-menuC font-medium pb-5 pt-5 lg:pt-0'} text={'Sample Number List'} as={'h6'}/>
                   <Peragrap className={'flex items-center gap-x-2 leading-7.5'} peraText={<><span>1</span><span>Create Store-specific attrittbutes on the fly</span></>}/>        
                   <Peragrap className={'flex items-center gap-x-2 leading-7.5'} peraText={<><span>2</span><span>Simple, Configurable (e.g. size, color, etc.), bundled</span></>}/>        
                   <Peragrap className={'flex items-center gap-x-2 leading-7.5'} peraText={<><span>3</span><span>Downloadable/Digital Products, Virtual Products</span></>}/>        

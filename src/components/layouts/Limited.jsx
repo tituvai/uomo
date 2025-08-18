@@ -45,15 +45,6 @@ const Limited = () => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          nextArrow: null,
-          prevArrow: null
-        }
-      },
-      {
-        breakpoint: 320,
-        settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
           nextArrow: null,

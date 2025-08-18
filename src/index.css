@@ -22,8 +22,10 @@ body{
 }
 
 
+/* shop Detelis part  */
 
-.slick-dots.custom-thumb {
+@media (width >= 64rem) { 
+  .slick-dots.custom-thumb {
   display: flex !important;
   flex-direction: column;
   position: absolute;
@@ -45,3 +47,6 @@ body{
 .slick-dots.custom-thumb li.slick-active img {
   opacity: calc(100%); 
 }
+ }
+
+
