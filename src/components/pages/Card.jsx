@@ -4,14 +4,22 @@ import Hadding from '../Hadding'
 import Peragrap from '../Peragrap'
 import Flex from '../Flex'
 import Image from '../Image'
-import cart from '/src/assets/cart.png'
-import cartOne from '/src/assets/cart1.png'
-import cartTwo from '/src/assets/cart2.png'
 import { MdOutlineClear } from "react-icons/md";
 import Button from '../Button'
 import SubMitBtn from '../SubMitBtn'
 import { Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { cartDicement, cartIncement, removeBtn } from '../../features/addCart/addToCartSlice'
 const Card = () => {
+    const data = useSelector ((state)=> state.cart.value)
+
+    const dispatch = useDispatch()
+
+    // subtotal Part
+        const vat= 9
+        const totleVat = data.reduce((total)=> total + vat , 0)
+      const subTotal = data.reduce((total, item) => total + item.price * item.quantity, 0);
+      const totalPrice = data.reduce((total, item) => total + vat + item.price * item.quantity, 0);
   return (
     <>
     <div className="">
@@ -33,33 +41,36 @@ const Card = () => {
                     <Hadding className={'w-[200px] text-base text-menuC font-medium leading-6'} text={'QUANTITY'} as={'h4'}/>
                     <Hadding className={'w-[200px] text-base text-menuC font-medium leading-6'} text={'SUBTOTAL'} as={'h4'}/>
                 </Flex>
-                <Flex className={'border-b-2 border-categoriC py-5'}>
+                {data.map((item)=>(
+                    <Flex key={item.title} className={'border-b-2 border-categoriC py-5'}>
                     <div className="w-[350px] flex items-center gap-x-4">
-                        <Image imgSrc={cart} imgAlt={'cart.png'}/>
+                        <Image className={'w-20'} imgSrc={item.image}/>
                         <div className="">
-                        <Hadding className={'text-base text-menuC font-medium'} text={'Zessi Dresses'} as={'h6'}/>
+                        <Hadding className={'text-base text-menuC font-medium'} text={item.title} as={'h6'}/>
                         <Hadding className={'text-base text-deleteC'} text={'yellow'} as={'h6'}/>
                         <Hadding className={'text-base text-deleteC'} text={'xl'} as={'h6'}/>
                         </div>
                     </div>
                     <div className="w-[150px]">
-                        <Hadding className={'text-base text-deleteC font-medium'} text={'$99'} as={'h5'}/>
+                        <Hadding className={'text-base text-deleteC font-medium'} text={item.price} as={'h5'}/>
                     </div>
                     <div className="w-[200px]">
                         <div className="lg:w-[120px] w-[80px] p-1 lg:p-3 border-2 border-categoriC flex items-center justify-between">
-                            <span className='text-2xl text-deleteC font-medium'>-</span>
-                            <span className='text-base text-deleteC font-medium'>3</span>
-                            <span className='text-base text-deleteC font-medium'>+</span>
+                            <span onClick={()=>{dispatch(cartIncement(item))}} className='text-base text-deleteC font-medium cursor-pointer'>+</span>
+                            <span className='text-base text-deleteC font-medium'>{item.quantity}</span>
+                            <span onClick={()=>{dispatch(cartDicement(item))}} className='text-2xl text-deleteC font-medium cursor-pointer'>-</span>
                         </div>
                     </div>
                     <div className="w-[150px]">
-                        <Hadding className={'text-base text-menuC font-medium'} text={'$399'} as={'h4'}/>
+                        <Hadding className={'text-base text-menuC font-medium'} text={item.price*item.quantity} as={'h4'}/>
                     </div>
                     <div className="w-[50px]">
-                       <MdOutlineClear className='text-lg text-deleteC'/> 
+                       <MdOutlineClear onClick={()=>{dispatch(removeBtn(item.title))}} className='text-lg text-deleteC cursor-pointer'/> 
                     </div>
                 </Flex>
-                <Flex className={'border-b-2 border-categoriC py-5'}>
+                ))}
+                
+                {/* <Flex className={'border-b-2 border-categoriC py-5'}>
                     <div className="w-[350px] flex items-center gap-x-4">
                         <Image imgSrc={cartOne} imgAlt={'cart1.png'}/>
                         <div className="">
@@ -73,9 +84,9 @@ const Card = () => {
                     </div>
                     <div className="w-[200px]">
                         <div className="lg:w-[120px] w-[80px] p-1 lg:p-3 border-2 border-categoriC flex items-center justify-between">
-                            <span className='text-2xl text-deleteC font-medium'>-</span>
-                            <span className='text-base text-deleteC font-medium'>4</span>
-                            <span className='text-base text-deleteC font-medium'>+</span>
+                            <span onClick={()=> disPatch(increment())} className='text-base text-deleteC font-medium cursor-pointer'>+</span>
+                            <span className='text-base text-deleteC font-medium'>{count}</span>
+                            <span onClick={()=> disPatch(decrement())} className='text-2xl text-deleteC font-medium cursor-pointer'>-</span>
                         </div>
                     </div>
                     <div className="w-[150px]">
@@ -110,7 +121,7 @@ const Card = () => {
                     <div className="w-[50px]">
                        <MdOutlineClear className='text-lg text-deleteC'/> 
                     </div>
-                </Flex>
+                </Flex> */}
                 <Flex className={'py-10 px-3 lg:px-0'}>
                     <div className="w-[300px]  lg:w-[400px] relative border border-categoriC">
                         <input className=' p-4 placeholder:text-base placeholder:text-deleteC outline-0 ' type="text" placeholder='Coupon Code' />
@@ -130,7 +141,7 @@ const Card = () => {
                     <Hadding className={'text-lg text-menuC font-medium'} text={'CART TOTALS'} as={'h3'}/>
                 <div className="flex items-center justify-between border-b-2 border-categoriC pb-3">
                     <Hadding className={'text-base text-menuC font-medium'}  text={'SUBTOTAL'} as={'h4'}/>
-                    <Hadding className={'text-base text-menuC font-medium'} text={'$1300'} as={'h4'}/>
+                   {data.length > 0 && ( <Hadding className={'text-base text-menuC font-medium'} text={subTotal} as={'h4'}/>)}
                 </div>
                 <div className="flex justify-between pt-3">
                     <Hadding className={'text-base text-menuC font-medium'} text={'SHIPPING'} as={'h4'}/>
@@ -155,11 +166,11 @@ const Card = () => {
                 </div>
                  <div className="flex items-center justify-between py-2 border-t-2 border-categoriC mt-5">
                     <Hadding className={'text-base text-menuC font-medium'} text={'VAT'} as={'h6'}/>
-                    <Hadding className={'w-[40%] text-base text-menuC font-medium'} text={'$19'} as={'h6'}/>          
+                    {data.length >1 && (<Hadding className={'w-[40%] text-base text-menuC font-medium'} text={totleVat} as={'h6'}/> )}         
                 </div>
                  <div className="flex items-center justify-between py-2 border-t-2 border-categoriC mt-5">
                     <Hadding className={'text-base text-menuC font-medium'} text={'TOTAL'} as={'h6'}/>
-                    <Hadding className={'w-[40%] text-base text-menuC font-medium'} text={'$1319'} as={'h6'}/>          
+                    {data.length >1 &&(<Hadding className={'w-[40%] text-base text-menuC font-medium'} text={totalPrice} as={'h6'}/>)}          
                 </div>
             </div>
                 <div className="pt-5">

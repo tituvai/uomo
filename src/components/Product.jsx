@@ -3,11 +3,25 @@ import Image from '/src/components/Image'
 import Flex from '/src/components/Flex'
 import { CiHeart } from "react-icons/ci";
 import Hadding from './Hadding'
-import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addCart } from '../features/addCart/addToCartSlice';
+
 
 
 
 const Product = ({productSrc, productAlt, productPrice, productDelete, productTitle, opacitySrc, opacityAlt, imgClear}) => {
+
+  const dispatch = useDispatch()
+
+  const AddToHandle = ()=>{
+    dispatch(addCart({
+      image : productSrc,
+      title : productTitle,
+      price : productPrice, 
+      quantity : 1
+    }))
+    
+  }
   return (
     <>
         <div className="relative group">
@@ -26,7 +40,7 @@ const Product = ({productSrc, productAlt, productPrice, productDelete, productTi
                 <span className='text-base text-deleteC'><del>{productDelete}</del></span>
                 
             </div>
-           <Link to={'/'}><button className='text-base text-menuC font-semibold py-4 cursor-pointer  lg:w-[270px] bg-white text-center hover:bg-borderC absolute left-1/2 -translate-x-1/2 bottom-30 opacity-0 translate-y-4 transition-all group-hover:translate-y-0  group-hover:opacity-100 duration-700'>ADD TO CARD</button></Link> 
+          <button onClick={AddToHandle} className='text-base text-menuC font-semibold py-4 cursor-pointer  lg:w-[270px] bg-white text-center hover:bg-borderC absolute left-1/2 -translate-x-1/2 bottom-30 opacity-0 translate-y-4 transition-all group-hover:translate-y-0  group-hover:opacity-100 duration-700'>ADD TO CARD</button>
         </div>
     </>
   )
