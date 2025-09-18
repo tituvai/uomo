@@ -50,7 +50,7 @@ const Banner = () => {
   return (
     <>
 
-      <div className="slider-container">
+      <div className="slider-container overflow-hidden">
       <Slider {...settings} className="custom-dots" >
         <div className="pt-12 pl-2 lg:pl-0 bg-[url('/src/assets/bannerBg.png')] bg-no-repeat bg-center bg-cover">
             <Container>

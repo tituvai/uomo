@@ -17,9 +17,10 @@ const Card = () => {
 
     // subtotal Part
         const vat= 9
-        const totleVat = data.reduce((total)=> total + vat , 0)
+        const totleVat = data.reduce((total)=> total + vat, 0)
       const subTotal = data.reduce((total, item) => total + item.price * item.quantity, 0);
       const totalPrice = data.reduce((total, item) => total + vat + item.price * item.quantity, 0);
+      
   return (
     <>
     <div className="">
@@ -166,11 +167,11 @@ const Card = () => {
                 </div>
                  <div className="flex items-center justify-between py-2 border-t-2 border-categoriC mt-5">
                     <Hadding className={'text-base text-menuC font-medium'} text={'VAT'} as={'h6'}/>
-                    {data.length >1 && (<Hadding className={'w-[40%] text-base text-menuC font-medium'} text={totleVat} as={'h6'}/> )}         
+                    {data.length >0 && (<Hadding className={'w-[40%] text-base text-menuC font-medium'} text={totleVat} as={'h6'}/> )}         
                 </div>
                  <div className="flex items-center justify-between py-2 border-t-2 border-categoriC mt-5">
                     <Hadding className={'text-base text-menuC font-medium'} text={'TOTAL'} as={'h6'}/>
-                    {data.length >1 &&(<Hadding className={'w-[40%] text-base text-menuC font-medium'} text={totalPrice} as={'h6'}/>)}          
+                    {data.length >0 &&(<Hadding className={'w-[40%] text-base text-menuC font-medium'} text={totalPrice} as={'h6'}/>)}          
                 </div>
             </div>
                 <div className="pt-5">

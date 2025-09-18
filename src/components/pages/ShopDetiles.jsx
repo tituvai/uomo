@@ -25,6 +25,8 @@ import botanclat from '/src/assets/botanclat.png'
 import botanclatOne from '/src/assets/botanclat1.png'
 import Cotton from '/src/assets/cotton.png'
 import CottonOne from '/src/assets/cotton1.png'
+import { useDispatch, useSelector } from "react-redux";
+import { addCart } from "../../features/addCart/addToCartSlice";
 
 
 
@@ -94,7 +96,17 @@ const ShopDetiles = () => {
   };
 
   // Active Class 
+
+  // AddToCart Part Start 
+
+  const product = useSelector((state)=>state.detalis.value)
   
+const dispatch = useDispatch()
+
+const handleAddToCart = ()=>{
+  dispatch(addCart({title:product.title, price: product.price, image:product.image}))
+}
+ 
  
   
   return (
@@ -106,7 +118,7 @@ const ShopDetiles = () => {
                     <div className="slider-container w-full lg:pl-30">
                     <Slider {...settings}>
                         {images.map((img, index) => (
-                        <div key={index}><img src={img} alt={`slide-${index}`}/></div>
+                        <div key={index}><img className="w-full h-[600px]" src={product.image} alt={`slide-${index}`}/></div>
                         ))}
                     </Slider>
                     </div>
@@ -117,8 +129,8 @@ const ShopDetiles = () => {
                         <span>/</span>
                         <span className="text-base text-menuC font-medium uppercase">The Shop</span>
                     </div>
-                    <Hadding className={'text-[26px] text-menuC pt-5'} text={'Lightweight Puffer Jacket With a Hood'} as={'h4'}/>
-                    <Hadding className={'text-[22px] text-menuC font-medium pb-5'} text={'$249'} as={'h4'}/>
+                    <Hadding className={'text-[26px] text-menuC pt-5'} text={product.title} as={'h4'}/>
+                    <Hadding className={'text-[22px] text-menuC font-medium pb-5'} text={product.price} as={'h4'}/>
                     <Peragrap className={'leading-6'} peraText={'Phasellus sed volutpat orci. Fusce eget lore mauris vehicula elementum gravida nec dui. Aenean aliquam varius ipsum, non ultricies tellus sodales eu. Donec dignissim viverra nunc, ut aliquet magna posuere eget.'}/>
                     <div className="flex flex-wrap gap-y-5 items-center gap-x-5 pt-8">
                         <Hadding className={'text-base text-menuC font-medium pr-10'} text={'SIZES'} as={'h6'}/>
@@ -141,7 +153,7 @@ const ShopDetiles = () => {
                             <span className="text-base text-deleteC font-medium">3</span>
                             <span className="text-2xl text-deleteC font-medium">-</span>
                         </div>
-                        <SubMitBtn className={'px-18 mt-3 lg:mt-0'} submit={'ADD TO CART'}/>
+                        <div className="" onClick={handleAddToCart}><SubMitBtn className={'px-18 mt-3 lg:mt-0'} submit={'ADD TO CART'}/></div>
                     </div>
                     <div className="flex items-center gap-x-10 pt-7">
                       <Button className={'flex items-center gap-x-2'} btnText={<><CiHeart className="text-xl"/><span>ADD TO WISHLIST</span></>}/>

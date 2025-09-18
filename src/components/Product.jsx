@@ -5,6 +5,8 @@ import { CiHeart } from "react-icons/ci";
 import Hadding from './Hadding'
 import { useDispatch } from 'react-redux';
 import { addCart } from '../features/addCart/addToCartSlice';
+import { Link } from 'react-router-dom';
+import { details } from '../features/details/detalisSlice';
 
 
 
@@ -22,12 +24,26 @@ const Product = ({productSrc, productAlt, productPrice, productDelete, productTi
     }))
     
   }
+
+
+  // Detalis Part Start 
+
+  const handleDetalis = ()=>{
+    dispatch(details({
+      image : productSrc,
+      title : productTitle,
+      price : productPrice, 
+      quantity : 1
+    }))
+  }
   return (
     <>
         <div className="relative group">
-            <div className="w-full lg:h-[400px] relative group">
-              <Image className={'w-full lg:h-[400px]'} imgSrc={productSrc} imgAlt={productAlt}/>
+            <div className="w-full lg:h-[400px] relative group" onClick={handleDetalis}>
+              <Link to={'shopDetiles'}> <Image className={'w-full h-[200px] lg:h-[400px]'} imgSrc={productSrc} imgAlt={productAlt}/>
+             
               <Image className={'w-full lg:h-[400px] absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-all duration-300'} imgSrc={opacitySrc} imgAlt={opacityAlt}/>
+              </Link>
             </div>
             <Flex className={'py-3'}>
                 <Hadding className={'text-sm text-deleteC'} text={'Dresses'} as={'h6'}/>

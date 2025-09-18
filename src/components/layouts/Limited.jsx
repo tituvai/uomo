@@ -57,7 +57,7 @@ const Limited = () => {
   return (
     <>
         <div className="">
-            <Container>
+            <Container  className={'overflow-hidden lg:overflow-visible'}>
                 <div className="text-center pb-10">
                     <Hadding className={'text-[35px] text-menuC font-mixed'} text={<><span>LIMITED</span><span className='font-extrabold'>EDITION</span></>} as={'h3'}/>
                 </div>
