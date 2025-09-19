@@ -56,7 +56,7 @@ const handleProuduct = ()=>{
   const [apProduct, setApProduct]=useState([])
   useEffect(()=>{
     async function allProduct(){
-      let data = await axios.get('https://tituvai.github.io/bdApiProducts/products/index.json')
+      let data = await axios.get('https://tituvai.github.io/E-comeApi/Product/index.json')
      
       setApProduct(data.data.data);
       
@@ -73,9 +73,14 @@ const handleProuduct = ()=>{
     }
   // Filter Part End
 
+  // Color And Size Part Start 
+
+  const [selectedsize, setSelectedsize]=useState('xs')
+  const [selectedColor, setSelectedColor]= useState('')
+
   return (
     <>
-    <div className="py-15 lg:py-50 bg-categoriC">
+    <div className="py-15 lg:py-50 bg-categoriC mt-10">
     <Container>
         <Hadding className={'text-center text-6xl text-menuC font-bold'} text={'SHOES'} as={'h3'}/>
      <div className=" pt-10">
@@ -141,16 +146,16 @@ const handleProuduct = ()=>{
           <FaChevronUp onClick={heandleColor} className='text-menuC'/>
         </div>
         {color && <div className="w-[70%] flex items-center gap-x-8 flex-wrap py-8 gap-y-8">
-            <div className='w-[20px] h-[20px] bg-[#0A2472] rounded-full'></div>
-            <div className='w-[20px] h-[20px] bg-[#D7BB4F] rounded-full'></div>
-            <div className='w-[20px] h-[20px] bg-[#282828] rounded-full'></div>
-            <div className='w-[20px] h-[20px] bg-[#B1D6E8] rounded-full'></div>
-            <div className='w-[20px] h-[20px] bg-[#9C7539] rounded-full'></div>
-            <div className='w-[20px] h-[20px] bg-[#D29B48] rounded-full'></div>
-            <div className='w-[20px] h-[20px] bg-[#E6AE95] rounded-full'></div>
-            <div className='w-[20px] h-[20px] bg-[#BABABA] rounded-full'></div>
-            <div className='w-[20px] h-[20px] bg-[#D76B67] rounded-full'></div>
-            <div className='w-[20px] h-[20px] bg-[#BFDCC4] rounded-full'></div>
+          {['#0A2472', '#D7BB4F', '#282828', '#B1D6E8', '#9C7539', '#D29B48', '#E6AE95', '#BABABA', '#D76B67', '#BFDCC4'].map((colorItem) => (
+            <div
+            key={colorItem}
+            className={`w-[20px] h-[20px] rounded-full ${
+                selectedsize === colorItem ? 'ring-2 ring-offset-2 ring-yellow-500' : ''
+            }`}
+            style={{ backgroundColor: colorItem }}
+            onClick={() => setSelectedsize(colorItem)}
+            ></div>
+            ))}
         </div>}
         {/* color Part End */}
 
@@ -162,13 +167,18 @@ const handleProuduct = ()=>{
           <FaChevronUp onClick={handleSize} className='text-menuC'/>
         </div>
         {size && <div className="w-[90%] flex gap-8 flex-wrap py-8">
-          <span className='text-menuC py-2 px-5 text-sm  border-2 border-[#E4E4E4] font-medium'>XS</span>
-          <span className='text-menuC py-2 px-5 text-sm  border-2 border-[#E4E4E4] font-medium'>S</span>
-          <span className='text-menuC py-2 px-5 text-sm  border-2 border-[#E4E4E4] font-medium'>M</span>
-          <span className='text-menuC py-2 px-5 text-sm  border-2 border-[#E4E4E4] font-medium'>L</span>
-          <span className='text-menuC py-2 px-5 text-sm  border-2 border-[#E4E4E4] font-medium'>XL</span>
-          <span className='text-menuC py-2 px-5 text-sm  border-2 border-[#E4E4E4] font-medium'>XXL</span>
+          {['xs', 's', 'm', 'l', 'xl', 'xxl'].map((sizeItem) => (
+            <div
+            key={sizeItem}
+            className={`text-base text-menuC w-[40px] h-[40px] flex items-center justify-center border-2 border-categoriC cursor-pointer ${
+                selectedsize === sizeItem ? 'ring-2 ring-offset-2 ring-categoriC' : ''
+            }`}
+            style={{ backgroundColor: sizeItem }}
+            onClick={() => setSelectedsize(sizeItem)}
+            >{sizeItem}</div>
+            ))}
         </div>}
+         
         {/* Size Part End */}
 
         {/* Brends Part Start  */}
@@ -280,16 +290,16 @@ const handleProuduct = ()=>{
           <FaChevronUp onClick={heandleColor} className='text-menuC'/>
         </div>
         {color && <div className="w-[70%] flex items-center gap-x-8 flex-wrap py-8 gap-y-8">
-            <div className='w-[20px] h-[20px] bg-[#0A2472] rounded-full'></div>
-            <div className='w-[20px] h-[20px] bg-[#D7BB4F] rounded-full'></div>
-            <div className='w-[20px] h-[20px] bg-[#282828] rounded-full'></div>
-            <div className='w-[20px] h-[20px] bg-[#B1D6E8] rounded-full'></div>
-            <div className='w-[20px] h-[20px] bg-[#9C7539] rounded-full'></div>
-            <div className='w-[20px] h-[20px] bg-[#D29B48] rounded-full'></div>
-            <div className='w-[20px] h-[20px] bg-[#E6AE95] rounded-full'></div>
-            <div className='w-[20px] h-[20px] bg-[#BABABA] rounded-full'></div>
-            <div className='w-[20px] h-[20px] bg-[#D76B67] rounded-full'></div>
-            <div className='w-[20px] h-[20px] bg-[#BFDCC4] rounded-full'></div>
+          {['#0A2472', '#D7BB4F', '#282828', '#B1D6E8', '#9C7539', '#D29B48', '#E6AE95', '#BABABA', '#D76B67', '#BFDCC4'].map((colorItem) => (
+            <div
+            key={colorItem}
+            className={`w-[20px] h-[20px] rounded-full ${
+                selectedsize === colorItem ? 'ring-2 ring-offset-2 ring-yellow-500' : ''
+            }`}
+            style={{ backgroundColor: colorItem }}
+            onClick={() => setSelectedsize(colorItem)}
+            ></div>
+            ))}
         </div>}
         {/* color Part End */}
 
@@ -301,12 +311,16 @@ const handleProuduct = ()=>{
           <FaChevronUp onClick={handleSize} className='text-menuC'/>
         </div>
         {size && <div className="w-[90%] flex gap-8 flex-wrap py-8">
-          <span className='text-menuC py-2 px-6 text-base  border-2 border-[#E4E4E4] font-medium'>XS</span>
-          <span className='text-menuC py-2 px-6 text-base  border-2 border-[#E4E4E4] font-medium'>S</span>
-          <span className='text-menuC py-2 px-6 text-base  border-2 border-[#E4E4E4] font-medium'>M</span>
-          <span className='text-menuC py-2 px-6 text-base  border-2 border-[#E4E4E4] font-medium'>L</span>
-          <span className='text-menuC py-2 px-6 text-base  border-2 border-[#E4E4E4] font-medium'>XL</span>
-          <span className='text-menuC py-2 px-6 text-base  border-2 border-[#E4E4E4] font-medium'>XXL</span>
+         {['xs', 's', 'm', 'l', 'xl', 'xxl'].map((sizeItem) => (
+            <div
+            key={sizeItem}
+            className={`text-base text-menuC w-[40px] h-[40px] flex items-center justify-center border-2 border-categoriC cursor-pointer ${
+                selectedsize === sizeItem ? 'ring-2 ring-offset-2 ring-categoriC' : ''
+            }`}
+            style={{ backgroundColor: sizeItem }}
+            onClick={() => setSelectedsize(sizeItem)}
+            >{sizeItem}</div>
+            ))}
         </div>}
         {/* Size Part End */}
 

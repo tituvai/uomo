@@ -97,6 +97,7 @@ const ShopDetiles = () => {
 
   // Active Class 
 
+
   // AddToCart Part Start 
 
   const product = useSelector((state)=>state.detalis.value)
@@ -104,14 +105,32 @@ const ShopDetiles = () => {
 const dispatch = useDispatch()
 
 const handleAddToCart = ()=>{
-  dispatch(addCart({title:product.title, price: product.price, image:product.image}))
+  dispatch(addCart({title:product.title, price: product.price, image:product.image, size: selectedsize}))
+}
+
+// Size Part Start 
+
+const [selectedsize, setSelectedsize]= useState('s')
+const [selectedColor, setSelectedColor]= useState('')
+
+// counter Part Start 
+const [count, setCount]=useState(1)
+
+const handleIncement = ()=>{
+   setCount(count + 1)
+}
+
+const handleDecement= ()=>{
+  if(count > 1){
+    setCount(count-1)
+  }
 }
  
  
   
   return (
     <>
-    <div className="px-3 lg:px-0">
+    <div className="px-3 lg:px-0 mt-25">
         <Container>
             <div className="lg:flex justify-between">
                 <div className="lg:w-[50%] pb-10 lg:pb-0">
@@ -134,24 +153,35 @@ const handleAddToCart = ()=>{
                     <Peragrap className={'leading-6'} peraText={'Phasellus sed volutpat orci. Fusce eget lore mauris vehicula elementum gravida nec dui. Aenean aliquam varius ipsum, non ultricies tellus sodales eu. Donec dignissim viverra nunc, ut aliquet magna posuere eget.'}/>
                     <div className="flex flex-wrap gap-y-5 items-center gap-x-5 pt-8">
                         <Hadding className={'text-base text-menuC font-medium pr-10'} text={'SIZES'} as={'h6'}/>
-                        <span className="text-base text-menuC w-[40px] h-[40px] flex items-center justify-center border-2 border-categoriC">xs</span>
-                        <span className="text-base text-menuC w-[40px] h-[40px] flex items-center justify-center border-2 border-categoriC">s</span>
-                        <span className="text-base text-menuC w-[40px] h-[40px] flex items-center justify-center border-2 border-categoriC">m</span>
-                        <span className="text-base text-menuC w-[40px] h-[40px] flex items-center justify-center border-2 border-categoriC">l</span>
-                        <span className="text-base text-menuC w-[40px] h-[40px] flex items-center justify-center border-2 border-categoriC">xl</span>
-                        <span className="text-base text-menuC w-[40px] h-[40px] flex items-center justify-center border-2 border-categoriC">xxl</span>
+                         {['xs', 's', 'm', 'l', 'xl', 'xxl'].map((size) => (
+                            <div
+                            key={size}
+                            className={`text-base text-menuC w-[40px] h-[40px] flex items-center justify-center border-2 border-categoriC cursor-pointer ${
+                                selectedsize === size ? 'ring-2 ring-offset-2 ring-categoriC' : ''
+                            }`}
+                            style={{ backgroundColor: size }}
+                            onClick={() => setSelectedsize(size)}
+                            >{size}</div>
+                        ))}
                     </div>
                     <div className="flex items-center gap-x-5 pt-8">
                         <Hadding className={'text-base text-menuC font-medium pr-10'} text={'COLOR'} as={'h6'}/>
-                        <span className=" w-[25px] h-[25px] bg-black rounded-full"></span>
-                        <span className=" w-[25px] h-[25px] bg-[#C93A3E] rounded-full"></span>
-                        <span className=" w-[25px] h-[25px] bg-[#E4E4E4] rounded-full"></span>
+                          {['#000000', '#FF8686', '#7ED321', '#B6B6B6', '#15CBA5'].map((color) => (
+                            <div
+                            key={color}
+                            className={`w-[20px] h-[20px] rounded-full cursor-pointer ${
+                                selectedColor === color ? 'ring-2 ring-offset-2 ring-hoverC' : ''
+                            }`}
+                            style={{ backgroundColor: color }}
+                            onClick={() => setSelectedColor(color)}
+                            ></div>
+                        ))}
                     </div>
                     <div className="lg:flex items-center gap-x-10 pt-8">
-                        <div className="w-[100px] p-2 border-2 border-categoriC flex justify-between items-center">
-                            <span className="text-base text-deleteC font-medium">+</span>
-                            <span className="text-base text-deleteC font-medium">3</span>
-                            <span className="text-2xl text-deleteC font-medium">-</span>
+                          <div className="w-[100px] p-2 border-2 border-categoriC flex justify-between items-center">
+                            <span className="text-base text-deleteC font-medium cursor-pointer" onClick={handleIncement}>+</span>
+                            <span className="text-base text-deleteC font-medium">{count}</span>
+                            <span className="text-2xl text-deleteC font-medium cursor-pointer" onClick={handleDecement}>-</span>
                         </div>
                         <div className="" onClick={handleAddToCart}><SubMitBtn className={'px-18 mt-3 lg:mt-0'} submit={'ADD TO CART'}/></div>
                     </div>

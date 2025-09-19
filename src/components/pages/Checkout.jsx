@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 const Checkout = () => {
   return (
     <>
-    <div className="px-3 lg:px-0">
+    <div className="px-3 lg:px-0 mt-25">
         <Container>
             <Hadding className={'text-menuC text-2xl text-center lg:text-left lg:text-[35px] font-bold py-10'} text={'SHIPPING AND CHECKOUT'} as={'h3'}/>
 

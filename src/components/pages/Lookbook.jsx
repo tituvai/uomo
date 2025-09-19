@@ -14,7 +14,7 @@ import Button from '../Button'
 const Lookbook = () => {
   return (
     <>
-    <div className="bg-categoriC py-10 text-center lg:text-left">
+    <div className="bg-categoriC py-10 text-center lg:text-left mt-25">
       <Container>
         <Hadding className={'text-[35px] text-menuC font-bold'} text={'LOOKBOOK'} as={'h3'}/>
       </Container>

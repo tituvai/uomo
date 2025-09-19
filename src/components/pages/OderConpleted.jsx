@@ -8,7 +8,7 @@ import Flex from '../Flex';
 const OderConpleted = () => {
   return (
     <>
-    <div className="pb-40">
+    <div className="pb-40 mt-25">
         <Container>
            <div className="text-2xl text-center lg:text-left pb-5">
              <Hadding className={'text-[35px] text-menuC font-bold py-10'} text={'Order received'} as={'h3'}/>

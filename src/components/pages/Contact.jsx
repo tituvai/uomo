@@ -8,7 +8,7 @@ import SubMitBtn from '../SubMitBtn'
 const Contact = () => {
   return (
     <>
-      <div className="bg-categoriC py-10 text-center lg:text-left">
+      <div className="bg-categoriC py-10 text-center lg:text-left mt-25">
         <Container>
           <Hadding className={'text-[35px] text-menuC font-bold'} text={'CONTACT US'} as={'h3'}/>
         </Container>

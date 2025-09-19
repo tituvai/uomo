@@ -14,7 +14,7 @@ import { MdOutlineClear } from "react-icons/md";
 const MyAcount = () => {
   return (
     <>
-    <div className="pb-50">
+    <div className="pb-50 mt-25">
         <Container>
             <Hadding className={'text-[35px] text-center lg:text-left text-menuC font-bold py-10'} text={'My account'} as={'h3'}/>
             <div className="lg:flex">

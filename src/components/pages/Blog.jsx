@@ -15,7 +15,7 @@ import Button from '../Button'
 const Blog = () => {
   return (
     <>
-    <div className="bg-categoriC py-10">
+    <div className="bg-categoriC py-10 mt-25">
         <Container>
             <div className="px-3 lg:px-0">
                 <Hadding className={'text-[35px] text-menuC font-bold'} text={'THE BLOG'} as={'h3'}/>
