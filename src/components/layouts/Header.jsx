@@ -9,6 +9,7 @@ import User from '../../assets/icon/User'
 import { FaRegHeart } from "react-icons/fa";
 import Bage from '../../assets/icon/Bage'
 import Bars from '../../assets/icon/Bars'
+import { HiOutlineBars3CenterLeft } from "react-icons/hi2";
 import { MdOutlineClear } from "react-icons/md";
 import Hadding from '../Hadding'
 import { useDispatch, useSelector } from 'react-redux'
@@ -20,6 +21,12 @@ import { addCart } from '../../features/addCart/addToCartSlice'
 
 const Header = () => {
 
+  // MenuItem Active Part Start 
+
+  const [manuActive, setManuActive]= useState(false)
+        const handleMenuActive = (index)=>{
+          setManuActive(index)
+        }
   // Mobile Part Start 
 
   const [mobileBars, setMobileBars] =useState(false)
@@ -80,6 +87,15 @@ const handleHideShow =()=>{
 // count wish Part 
   const totalWish = wishProduct.reduce((total, item)=> total+ item.quantity, 0)
 
+
+  // Menu Bars Part Start 
+
+  const [barsOn, setBarsOn]= useState(false)
+
+  const handleBars = ()=>{
+    setBarsOn(!barsOn)
+  }
+
   return (
     <>
         <div className={`fixed top-0 left-0 w-full py-9  z-50 transition-transform duration-300 ${isVisible ? 'translate-y-0 bg-white' : '-translate-y-full bg-white'}`}>
@@ -98,7 +114,7 @@ const handleHideShow =()=>{
                                           {name:'LOOKBOOK', path: '/lookbook'},
                                           {name:'CONTACT', path: '/contact'},
                                         ].map((item, index)=>(
-                                          <Link to={item.path} key={index}><li className='text-sm text-menuC font-medium leading-7 group relative'><span className='w-0 group-hover:w-full h-[2px] bg-menuC transition-all duration-500 absolute bottom-0 left-0'></span>{item.name}</li></Link>
+                                          <Link to={item.path} key={index} onClick={()=>handleMenuActive(index)}><li className='text-sm text-menuC font-medium leading-7 group relative'><span className={`w-0 group-hover:w-full h-[2px] bg-menuC transition-all duration-500 absolute bottom-0 left-0 ${manuActive=== index ? 'w-full bg-menuC' : ''}`}></span>{item.name}</li></Link>
                                         ))
                                       }                                              
                             </ul>
@@ -139,7 +155,30 @@ const handleHideShow =()=>{
                           <Link to={'/card'}><Bage/></Link>
                           <Hadding className={'text-base font-normal absolute -top-4 -right-2'} text={totalItem} as={'h3'}/>
                         </div>
-                        <Link to={'/'}><Bars/></Link>   
+                        
+                        <div className="relative">
+                          <HiOutlineBars3CenterLeft onClick={handleBars} className='size-8 cursor-pointer'/>
+                          {barsOn &&<div className="absolute -right-20 top-10 bg-gray-100 rounded p-10 w-[200px]">
+                            <MdClear onClick={handleBars} className='size-6 absolute top-4 right-4'/>
+                               <ul className='flex flex-col-reverse gap-x-10 gap-y-3  justify-center'>
+                                    {
+                                      [
+                                      {name:'#STAYHOME', path: '/'},
+                                      {name:'NEW IN', path: '/'},
+                                      {name:'JACKETS ', path: '/'},
+                                      {name:'HOODIES ', path: '/'},
+                                      {name:'MEN', path: '/'},
+                                      {name:'WOMEN', path: '/'},
+                                      {name:'TROUSERS', path: '/'},
+                                      {name:'ACCESSORIES', path: '/'},
+                                      {name:'SHOES', path: '/'}
+                                    ].map((item, index)=>(
+                                      <Link to={item.path} key={index}><li className='text-base  text-menuC font-medium relative group'>{item.name}</li></Link>
+                                    ))
+                                  }
+                                  </ul>
+                          </div>}
+                        </div>  
                     </div>
                 </Flex>
               </div>
@@ -176,7 +215,7 @@ const handleHideShow =()=>{
                                           {name:'LOOKBOOK', path: '/lookbook'},
                                           {name:'CONTACT', path: '/contact'},
                                         ].map((item, index)=>(
-                                          <Link to={item.path} key={index}><li className='text-sm text-menuC font-medium leading-8 group relative'><span className='w-0 group-hover:w-full h-[2px] bg-menuC transition-all duration-500 absolute bottom-0 left-0'></span>{item.name}</li></Link>
+                                          <Link to={item.path} key={index} onClick={()=>handleMenuActive(index)}><li className={`text-sm text-menuC font-medium leading-8 group relative ${manuActive=== index ? 'text-red-500' : ''}`}><span className='w-0 group-hover:w-full h-[2px] bg-menuC transition-all duration-500 absolute bottom-0 left-0'></span>{item.name}</li></Link>
                                         ))
                                       }                                              
                             </ul>

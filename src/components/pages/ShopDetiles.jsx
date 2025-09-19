@@ -77,7 +77,7 @@ const ShopDetiles = () => {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           initialSlide: 2,
           nextArrow: null,
           prevArrow: null
@@ -152,7 +152,7 @@ const handleDecement= ()=>{
                     <Hadding className={'text-[22px] text-menuC font-medium pb-5'} text={product.price} as={'h4'}/>
                     <Peragrap className={'leading-6'} peraText={'Phasellus sed volutpat orci. Fusce eget lore mauris vehicula elementum gravida nec dui. Aenean aliquam varius ipsum, non ultricies tellus sodales eu. Donec dignissim viverra nunc, ut aliquet magna posuere eget.'}/>
                     <div className="flex flex-wrap gap-y-5 items-center gap-x-5 pt-8">
-                        <Hadding className={'text-base text-menuC font-medium pr-10'} text={'SIZES'} as={'h6'}/>
+                        <Hadding className={'text-base text-menuC font-medium lg:pr-10'} text={'SIZES'} as={'h6'}/>
                          {['xs', 's', 'm', 'l', 'xl', 'xxl'].map((size) => (
                             <div
                             key={size}
@@ -165,7 +165,7 @@ const handleDecement= ()=>{
                         ))}
                     </div>
                     <div className="flex items-center gap-x-5 pt-8">
-                        <Hadding className={'text-base text-menuC font-medium pr-10'} text={'COLOR'} as={'h6'}/>
+                        <Hadding className={'text-base text-menuC font-medium lg:pr-10'} text={'COLOR'} as={'h6'}/>
                           {['#000000', '#FF8686', '#7ED321', '#B6B6B6', '#15CBA5'].map((color) => (
                             <div
                             key={color}
@@ -224,7 +224,7 @@ const handleDecement= ()=>{
 
             <div className="py-30">
               <Hadding className={'text-[26px] text-menuC pb-8'} text={<><span>RELATED</span> <span className="font-bold">PRODUCTS</span></>} as={'h4'}/>
-              <Slider {...settingsTwo} className="-mx-4">
+              <Slider {...settingsTwo} className="-mx-4 overflow-hidden">
                 <div className=" pl-4">
                 <Product productSrc={crapped} productAlt={'cropped.png'} productTitle={'Cropped Faux Leather Jacket'} productPrice={'$29'} opacitySrc={crappadOne}/>
                 </div>
