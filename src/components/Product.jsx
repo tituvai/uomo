@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from '/src/components/Image'
 import Flex from '/src/components/Flex'
 import { CiHeart } from "react-icons/ci";
@@ -16,6 +16,7 @@ const Product = ({productSrc, productAlt, productPrice, productDelete, productTi
   const dispatch = useDispatch()
 
   const AddToHandle = ()=>{
+    setCartActive(!cartActive)
     dispatch(addCart({
       image : productSrc,
       title : productTitle,
@@ -24,6 +25,9 @@ const Product = ({productSrc, productAlt, productPrice, productDelete, productTi
     }))
     
   }
+  // Active AddToCart 
+
+  const [cartActive, setCartActive]= useState(false)
 
 
   // Detalis Part Start 
@@ -40,6 +44,7 @@ const Product = ({productSrc, productAlt, productPrice, productDelete, productTi
   // Add To Wish Part 
 
   const handleWish = ()=>{
+    setWishActive(!wishActive)
     dispatch(addWish({
        image : productSrc,
       title : productTitle,
@@ -47,6 +52,10 @@ const Product = ({productSrc, productAlt, productPrice, productDelete, productTi
       quantity : 1
     }))
   }
+
+  // wish active part 
+
+  const [wishActive, setWishActive]=useState(false)
   return (
     <>
         <div className="relative group">
@@ -58,7 +67,7 @@ const Product = ({productSrc, productAlt, productPrice, productDelete, productTi
             </div>
             <Flex className={'py-3'}>
                 <Hadding className={'text-sm text-deleteC'} text={'Dresses'} as={'h6'}/>
-                <CiHeart onClick={handleWish} className='text-deleteC'/> 
+               {wishActive ? <IoHeart onClick={handleWish} className='text-deleteC'/> : <CiHeart onClick={handleWish} className='text-deleteC'/>}
             </Flex>
             <Hadding className={'text-base text-menuC'} text={productTitle} as={'h4'}/>
             <div className="absolute top-5 left-5 opacity-0 group-hover:opacity-100  p-2">{imgClear}</div>
@@ -67,7 +76,7 @@ const Product = ({productSrc, productAlt, productPrice, productDelete, productTi
                 <span className='text-base text-deleteC'><del>{productDelete}</del></span>
                 
             </div>
-          <button onClick={AddToHandle} className='text-base text-menuC font-semibold py-4 cursor-pointer  lg:w-[270px] bg-white text-center hover:bg-borderC absolute left-1/2 -translate-x-1/2 bottom-30 opacity-0 translate-y-4 transition-all group-hover:translate-y-0  group-hover:opacity-100 duration-700'>ADD TO CARD</button>
+          <button onClick={AddToHandle} className={`text-base text-menuC font-semibold py-4 cursor-pointer  lg:w-[270px]  text-center  absolute left-1/2 -translate-x-1/2 bottom-30 opacity-0 translate-y-4 transition-all group-hover:translate-y-0  group-hover:opacity-100 duration-700 ${cartActive ? 'bg-white hover:bg-borderC' : 'bg-gray-500 text-white'}`}>ADD TO CARD</button>
         </div>
     </>
   )

@@ -109,7 +109,7 @@ const handleHideShow =()=>{
                         <Link  to={'/myAcount'}><User/></Link>
                          <div className="relative">
                           <FaRegHeart onClick={handleHideShow} className="cursor-pointer size-5 text-menuC" />
-                          <Hadding className={'absolute -top-4 -right-3 text-xl font-normal'} text={totalWish} as={'h4'}/>
+                          <Hadding className={'absolute -top-4 -right-3 text-base font-normal'} text={totalWish} as={'h4'}/>
                            {wishHide && <div className="w-[500px] bg-black rounded py-4 px-5 absolute top-8 right-0">
                             <MdClear onClick={handleHideShow}  className='text-white text-2xl mb-3 cursor-pointer'/>
                             <div className="">
@@ -137,7 +137,7 @@ const handleHideShow =()=>{
                         </div>
                         <div className="relative">
                           <Link to={'/card'}><Bage/></Link>
-                          <Hadding className={'text-xl font-normal absolute -top-4 -right-2'} text={totalItem} as={'h3'}/>
+                          <Hadding className={'text-base font-normal absolute -top-4 -right-2'} text={totalItem} as={'h3'}/>
                         </div>
                         <Link to={'/'}><Bars/></Link>   
                     </div>
@@ -156,14 +156,16 @@ const handleHideShow =()=>{
                     <Link to={'/'}><Image imgSrc={logo} imgAlt={'logo.png'}/></Link>                 
                   </div>
                   <div className="">
-                    <Link to={'/card'}><Bage/></Link>
+                   <div className="relative">
+                          <Link to={'/card'}><Bage/></Link>
+                          <Hadding className={'text-base font-normal absolute -top-3 -right-1'} text={totalItem} as={'h3'}/>
+                        </div>
                   </div>
                 </Flex>
                
               </div>
                 {/* Mobile Phone Device Part End */}
-            </Container>
-             { mobileBars && <div className="bg-stone-100 p-5 mt-5">
+                { mobileBars && <div className="bg-stone-100 p-5 mt-5">
                       <input className='w-full p-2 border-1 border-categoriC outline-0' type="text" placeholder='Search' />
                        <ul className='py-5'>
                                   {
@@ -179,10 +181,14 @@ const handleHideShow =()=>{
                                       }                                              
                             </ul>
                             <div className="flex items-center gap-x-3">
-                              <Link to={'/'}><User/></Link>
-                              <Link to={'/myAcount'}><Heart/></Link>
+                              <Link to={'/myAcount'}><User/></Link>
+                              <div className="">
+                                <FaRegHeart  onClick={handleHideShow}/>
+                              </div>
                             </div>
                      </div>}
+            </Container>
+             
         </div>
     </>
   )

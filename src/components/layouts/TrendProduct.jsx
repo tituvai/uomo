@@ -39,7 +39,7 @@ const TrendProduct = () => {
                     <Link to={'/'}><li className='text-base text-deleteC font-medium hover:text-menuC relative group'><div className="w-0 h-[2px] bg-menuC absolute bottom-0 left-0 group-hover:w-full transition-all duration-300"></div> TOP RATING</li></Link>                              
                 </ul>
             </div>
-            <Flex className={'flex-wrap gap-y-6 py-7'}>
+            <Flex className={'flex-wrap gap-y-6 py-7 items-start'}>
                 <div className="w-[48%] lg:w-[24%]">
                     <Product productSrc={botanclat} productAlt={'botanclat.png'} opacitySrc={botanclat1} opacityAlt={'botanclat1.png'} productTitle={'Shirt In Botanical Cheetah Print'} productPrice={27}/>
                 </div>

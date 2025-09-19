@@ -23,7 +23,7 @@ const Card = () => {
       
   return (
     <>
-    <div className="mt-10">
+    <div className="mt-25 px-2 lg:px-0">
         <Container>
             <Hadding className={'text-[35px] text-center lg:text-left text-menuC font-bold py-10'} text={'CART'} as={'h3'}/>
 

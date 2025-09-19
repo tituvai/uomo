@@ -134,8 +134,8 @@ const handleDecement= ()=>{
         <Container>
             <div className="lg:flex justify-between">
                 <div className="lg:w-[50%] pb-10 lg:pb-0">
-                    <div className="slider-container w-full lg:pl-30">
-                    <Slider {...settings}>
+                    <div className="slider-container w-full lg:pl-30 ">
+                    <Slider {...settings} className="overflow-hidden">
                         {images.map((img, index) => (
                         <div key={index}><img className="w-full h-[600px]" src={product.image} alt={`slide-${index}`}/></div>
                         ))}
